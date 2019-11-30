@@ -7,6 +7,7 @@ public class Click_Manager : MonoBehaviour
 {
 
     public SceneHandler doorExitScene;
+    public Animator fadeAnimator;
 
 
     // Start is called before the first frame update
@@ -45,7 +46,8 @@ public class Click_Manager : MonoBehaviour
                     else {
                         //Mike put DOOR sound here;
                         Debug.Log("I quit my home");
-                        doorExitScene.scene0To1();
+                        fadeAnimator.SetBool("PlayFade", true);
+                        StartCoroutine(FadeCoroutine());                        
                         //Change scene to sam's one;
                     }
                 }
@@ -116,5 +118,11 @@ public class Click_Manager : MonoBehaviour
 
 
         }
+    }
+
+    IEnumerator FadeCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        doorExitScene.scene0To1();
     }
 }

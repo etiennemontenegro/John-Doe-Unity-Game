@@ -3,7 +3,7 @@
 public class FadeAnimation : MonoBehaviour
 {
 
-    public Animator fadeAnimator;
+    public Animator fadeAnimator;    
 
     // Update is called once per frame
     void Update()
@@ -13,7 +13,7 @@ public class FadeAnimation : MonoBehaviour
 
     public void PlayFadeIn()
     {
-        fadeAnimator.SetBool("PlayFade", true);
+        fadeAnimator.SetBool("PlayFade", true);        
     }
 
     public void PlayFadeOut()
