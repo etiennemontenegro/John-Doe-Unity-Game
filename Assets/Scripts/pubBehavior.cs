@@ -5,22 +5,44 @@ using UnityEngine;
 public class pubBehavior : MonoBehaviour
 {
     private GameObject pub;
-    private float moveSpeed =.1f;
+   
+
+    public float moveSpeed =.1f;
+    private bool HitPlayer = false;
+    private bool IsMorning=false,IsNight=false;
     public bool hasSpawned = false;
     public bool HasClicked = true;
+    public int pubNumber;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        pub = gameObject;
+     
 
+        if (IsNight)
+        {
+            moveSpeed = moveSpeed * -1;
+            pub.transform.position = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
+
+        }
+        pub = gameObject;
+    
+
+
+        pubNumber = Random.Range(1,10);
+      ;
     }
 
     // Update is called once per frame
     void Update()
     {
         pub.transform.Translate(-1*moveSpeed, 0, 0);
-        if (pub.transform.position.x< -11)
+        if (pub.transform.position.x< -30)
         {
+
+            ObjectSpawner.hasSpawned = false;
+            ObjectSpawner.amountPubs++;
             Destroy(pub);
         }
 
@@ -30,28 +52,22 @@ public class pubBehavior : MonoBehaviour
 
         }
 
-
-        if (HasClicked)
-        {
-            moveSpeed = .1f;
-
-        }
-
-        if (Input.touchCount > 0)
-        {
-            HasClicked = true;
-        }
     }
 
-
-
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collision)
     {
-        HasClicked = false;
-        Debug.Log("I am reading");
-        
+        if (collision.gameObject.tag == "Player")
+        {
+                HitPlayer = true;
+                Debug.Log(pubNumber);
+                 //PlaySound of pub here 
+        }
+
+
 
     }
-}
+    }
+
+
 
 

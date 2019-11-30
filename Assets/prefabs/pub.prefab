@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5314889449789524592}
   - component: {fileID: 4338932112602717451}
   - component: {fileID: 167947837}
-  - component: {fileID: -4671701463919124705}
-  m_Layer: 0
+  - component: {fileID: 5520582798131921114}
+  - component: {fileID: 2867636328363978715}
+  m_Layer: 8
   m_Name: pub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +96,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSpawned: 0
---- !u!65 &-4671701463919124705
+  HasClicked: 1
+  pubNumber: 0
+  handler: {fileID: 0}
+--- !u!54 &5520582798131921114
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6200370494856806342}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &2867636328363978715
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
