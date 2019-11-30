@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delete_this : MonoBehaviour
+public class BlankScript_Game : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
