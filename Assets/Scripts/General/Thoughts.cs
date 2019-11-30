@@ -28,7 +28,7 @@ public class Thoughts : MonoBehaviour
             yield return null;
         }
 
-        if (AlreadyDone == false && GlobalVariable.morning != true)
+        if (AlreadyDone == false &&GlobalVariable.morning == false)
         {
             Debug.Log("MIKE play too tired sound");
             //MIKE play too tired sound

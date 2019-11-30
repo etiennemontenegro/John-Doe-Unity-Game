@@ -37,6 +37,7 @@ public class SceneHandler : MonoBehaviour
             GlobalVariable.sceneIndex = 2;
             SwitchScene(GlobalVariable.sceneIndex);
         GlobalVariable.walkToWork = false;
+        GlobalVariable.atWork = true;
         
     }
 
