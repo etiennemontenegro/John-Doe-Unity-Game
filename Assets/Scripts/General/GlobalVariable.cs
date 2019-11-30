@@ -23,7 +23,7 @@ public class GlobalVariable : MonoBehaviour
 
     //HOUSE/////////////////////////////////////////////////////////
 
-
+    public static bool _IsTooTired = false;
 
     //WORK/////////////////////////////////////////////////////////
     public static bool atWork = false;
