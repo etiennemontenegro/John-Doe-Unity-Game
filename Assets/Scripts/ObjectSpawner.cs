@@ -5,7 +5,8 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject SpawnedObject;
-    public bool hasSpawned = false;
+    
+    static public bool hasSpawned = false;
     // Start is called before the first frame update
     void Start()
     {
