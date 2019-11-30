@@ -18,12 +18,18 @@ public class WeekHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(walkTime);
      if( GlobalVariable.walkToWork )
         {
             walkTimer();
         }
-        
-        
+
+        if (GlobalVariable.backHome)
+        {
+            walkTimer();
+        }
+
+
     }
 
     void WeekendCheck()
