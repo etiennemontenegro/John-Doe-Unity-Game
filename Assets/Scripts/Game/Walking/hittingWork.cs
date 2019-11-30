@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hittingWork : MonoBehaviour
 {
+   public SceneHandler changingScene;
    private GameObject work,player;
     private float moveSpeed = .05f;
     // Start is called before the first frame update
@@ -28,4 +30,21 @@ public class hittingWork : MonoBehaviour
         }
     }
 
+
+    void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+           
+            changingScene.scene1To2();
+        }
+
+       
+
+    }
+
+
 }
+
+
+

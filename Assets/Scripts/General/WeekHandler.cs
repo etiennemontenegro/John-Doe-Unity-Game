@@ -84,7 +84,7 @@ public class WeekHandler : MonoBehaviour
 
         if (walkTime < 0)
         {
-            GlobalVariable.atWork = true;
+            GlobalVariable.hasArrived = true;
         }
     }
 }
