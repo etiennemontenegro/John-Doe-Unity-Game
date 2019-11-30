@@ -5,19 +5,33 @@ using UnityEngine;
 public class pubBehavior : MonoBehaviour
 {
     private GameObject pub;
-    private float moveSpeed =.05f;
+   
+
+    public float moveSpeed =.1f;
+    private bool HitPlayer = false;
+    private bool IsMorning=false,IsNight=false;
     public bool hasSpawned = false;
     public bool HasClicked = true;
-    private bool HitPlayer = false;
     public int pubNumber;
-    public GameObject handler;
+
 
     // Start is called before the first frame update
     void Start()
     {
-      
-        pubNumber = Random.Range(1,10);
+     
+
+        if (IsNight)
+        {
+            moveSpeed = moveSpeed * -1;
+            pub.transform.position = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
+
+        }
         pub = gameObject;
+    
+
+
+        pubNumber = Random.Range(1,10);
+      ;
     }
 
     // Update is called once per frame
@@ -28,7 +42,7 @@ public class pubBehavior : MonoBehaviour
         {
 
             ObjectSpawner.hasSpawned = false;
-
+            ObjectSpawner.amountPubs++;
             Destroy(pub);
         }
 
@@ -46,11 +60,12 @@ public class pubBehavior : MonoBehaviour
         {
                 HitPlayer = true;
                 Debug.Log(pubNumber);
-            }
-          //PlaySound of pub here 
-
-
+                 //PlaySound of pub here 
         }
+
+
+
+    }
     }
 
 
