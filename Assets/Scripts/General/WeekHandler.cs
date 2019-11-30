@@ -18,8 +18,15 @@ public class WeekHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(walkTime);
      if( GlobalVariable.walkToWork )
         {
+            walkTimer();
+        }
+
+        if (GlobalVariable.backHome)
+        {
+           
             walkTimer();
         }
         
@@ -79,7 +86,7 @@ public class WeekHandler : MonoBehaviour
 
     void walkTimer()
     {
-
+  
         walkTime -= Time.deltaTime;
 
         if (walkTime < 0)

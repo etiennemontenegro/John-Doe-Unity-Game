@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class hittingHome : MonoBehaviour
 {
-   private GameObject home,player;
+    public SceneHandler changingScene;
+    private GameObject home, player;
     private float moveSpeed = .05f;
     // Start is called before the first frame update
     void Start()
@@ -28,4 +29,16 @@ public class hittingHome : MonoBehaviour
         }
     }
 
+
+
+    void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+
+            changingScene.scene1To0();
+        }
+
+
+    }
 }
