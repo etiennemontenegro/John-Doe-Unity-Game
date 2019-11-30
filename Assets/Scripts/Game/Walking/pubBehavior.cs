@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class pubBehavior : MonoBehaviour
 {
-    private GameObject pub;
+    public GameObject pub;
    
 
     public float moveSpeed =.1f;
@@ -12,21 +12,21 @@ public class pubBehavior : MonoBehaviour
     private bool IsMorning=false,IsNight=false;
     public bool hasSpawned = false;
     public bool HasClicked = true;
-    public int pubNumber;
+    public int pubNumber,maxDist = 20;
 
 
     // Start is called before the first frame update
     void Start()
     {
-     
-
+        pub = gameObject;
+        IsNight = playerHandler.isNight;
         if (IsNight)
         {
             moveSpeed = moveSpeed * -1;
             pub.transform.position = new Vector3(transform.position.x * -1, transform.position.y, transform.position.z);
 
         }
-        pub = gameObject;
+     
     
 
 
@@ -38,7 +38,7 @@ public class pubBehavior : MonoBehaviour
     void Update()
     {
         pub.transform.Translate(-1*moveSpeed, 0, 0);
-        if (pub.transform.position.x< -30)
+        if (pub.transform.position.x< -maxDist|| pub.transform.position.x>maxDist )
         {
 
             ObjectSpawner.hasSpawned = false;

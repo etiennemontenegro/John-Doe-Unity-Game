@@ -5,10 +5,12 @@ using UnityEngine;
 public class playerHandler : MonoBehaviour
 {
     public GameObject player;
-    public bool isNight;
+    static public bool isNight;
     // Start is called before the first frame update
     void Start()
+
     {
+        isNight = true;
        if(isNight)player.transform.position = new Vector3(player.transform.position.x * -1, player.transform.position.y, player.transform.position.z);
     }
 

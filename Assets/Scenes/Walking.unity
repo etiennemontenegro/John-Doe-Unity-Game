@@ -139,7 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1940032885}
-  isNight: 0
 --- !u!1 &1670595046
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +229,7 @@ Transform:
   m_LocalScale: {x: 19.886, y: 2.2436097, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1940032885 stripped
 GameObject:
@@ -445,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 6654495124468356176, guid: d793b0090fac08b418bd943db71eb527,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6654495124468356176, guid: d793b0090fac08b418bd943db71eb527,
         type: 3}
@@ -473,5 +472,11 @@ PrefabInstance:
       propertyPath: hasArrived
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6654495124468356179, guid: d793b0090fac08b418bd943db71eb527,
+        type: 3}
+      propertyPath: Home
+      value: 
+      objectReference: {fileID: 8928722076419845442, guid: 07722c616021fef47a91fbc0cc8ddd11,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d793b0090fac08b418bd943db71eb527, type: 3}
