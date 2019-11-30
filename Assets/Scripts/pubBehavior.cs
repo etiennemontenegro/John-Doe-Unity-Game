@@ -28,6 +28,7 @@ public class pubBehavior : MonoBehaviour
         {
 
             ObjectSpawner.hasSpawned = false;
+
             Destroy(pub);
         }
 
