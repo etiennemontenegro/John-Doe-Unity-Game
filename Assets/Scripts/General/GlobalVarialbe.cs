@@ -16,10 +16,10 @@ public class GlobalVariable : MonoBehaviour
 
     public static int wallet = 0; //argent dans ton compte
 
-    
+    public static bool startGame = false; //jouer commence a jouer ( sort du menu)
 
     //HOUSE
-
+    public static bool goToWork = false;
 
     //WORK
 
