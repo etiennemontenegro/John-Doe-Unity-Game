@@ -85,6 +85,7 @@ public class WeekHandler : MonoBehaviour
             GlobalVariable.morning = false;
             GlobalVariable.backHome = true;
             interaction.UpdatePaycheck();
+            Debug.Log(GlobalVariable.paycheck);
             switchScene.scene2To1();
         }
 

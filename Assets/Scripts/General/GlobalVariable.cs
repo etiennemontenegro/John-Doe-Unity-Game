@@ -29,7 +29,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool hasArrived = false;
     public static bool atWork = false;
     public static bool workIsDone = false;
-    public static int paycheck = 0; //salaire verser a chaque semaine
+    public static int paycheck ; //salaire verser a chaque semaine
 
     //TRAVELLING////////////////////////////////////////////////
 
