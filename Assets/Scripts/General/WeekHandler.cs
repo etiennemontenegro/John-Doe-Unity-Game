@@ -6,6 +6,7 @@ public class WeekHandler : MonoBehaviour
 {
 
     public SceneHandler switchScene;
+    public WorkInteraction interaction;
 
     float weekendTime = 120;
     float workTime = 20;
@@ -83,6 +84,7 @@ public class WeekHandler : MonoBehaviour
             GlobalVariable.atWork = false;
             GlobalVariable.morning = false;
             GlobalVariable.backHome = true;
+            interaction.UpdatePaycheck();
             switchScene.scene2To1();
         }
 
