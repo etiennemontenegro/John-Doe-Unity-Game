@@ -10,7 +10,8 @@ public class playerHandler : MonoBehaviour
     void Start()
 
     {
-        isNight = true;
+        GlobalVariable.walkToWork = true;
+        isNight = !GlobalVariable.morning;
        if(isNight)player.transform.position = new Vector3(player.transform.position.x * -1, player.transform.position.y, player.transform.position.z);
     }
 
