@@ -261,19 +261,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8657773065653412143, guid: f82943a02bc14874fb1cf4a79bd49853,
+    - target: {fileID: 8242722349839853743, guid: f82943a02bc14874fb1cf4a79bd49853,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: switchScene
+      value: 
+      objectReference: {fileID: 1659237269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f82943a02bc14874fb1cf4a79bd49853, type: 3}
---- !u!95 &288118990 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6544827637307047344, guid: f82943a02bc14874fb1cf4a79bd49853,
-    type: 3}
-  m_PrefabInstance: {fileID: 288118989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1619282377
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +351,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659237269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9071512415387388890, guid: f82943a02bc14874fb1cf4a79bd49853,
+    type: 3}
+  m_PrefabInstance: {fileID: 288118989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae663f8b5371db64d931e1c43ebe4b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1899174894
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,18 +459,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2064424541 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9071512415387388890, guid: f82943a02bc14874fb1cf4a79bd49853,
-    type: 3}
-  m_PrefabInstance: {fileID: 288118989}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae663f8b5371db64d931e1c43ebe4b97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2140887901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -536,17 +530,13 @@ PrefabInstance:
         type: 3}
       propertyPath: doorExitScene
       value: 
-      objectReference: {fileID: 2064424541}
+      objectReference: {fileID: 9071512415387388890, guid: 971d5c03eb4dc3e4fab81ab60cfaa7b6,
+        type: 3}
     - target: {fileID: 8985714537578734905, guid: e67abf64f18322345b1f759cfe116245,
         type: 3}
       propertyPath: newMonologue
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8985714537578734905, guid: e67abf64f18322345b1f759cfe116245,
-        type: 3}
-      propertyPath: fadeAnimator
-      value: 
-      objectReference: {fileID: 288118990}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e67abf64f18322345b1f759cfe116245, type: 3}
 --- !u!1001 &8013172686929230843

@@ -19,8 +19,9 @@ public class ObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    hasArrived = GlobalVariable.hasArrived;
 
+     if(GlobalVariable.morning) hasArrived = GlobalVariable.hasArrived;
+      if (!GlobalVariable.morning) hasArrived = GlobalVariable.backHome;
 
 
 
