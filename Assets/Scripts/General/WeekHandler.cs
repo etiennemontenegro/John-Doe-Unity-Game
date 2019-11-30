@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeekendCheker : MonoBehaviour
+public class WeekHandler : MonoBehaviour
 {
 
     float weekendTime = 120;
     float workTime = 90;
+    float walkTime = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,11 @@ public class WeekendCheker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+     if( GlobalVariable.walkToWork )
+        {
+            walkTimer();
+        }
+        
         
     }
 
@@ -40,7 +46,14 @@ public class WeekendCheker : MonoBehaviour
         {
             GlobalVariable.day = 0;
         }
+
+        WeekendCheck();
+
     }
+
+
+
+    /// TIMERS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     void WeekendTimer()
     {
@@ -62,6 +75,17 @@ public class WeekendCheker : MonoBehaviour
             GlobalVariable.morning = false;
         }
 
+    }
+
+    void walkTimer()
+    {
+
+        walkTime -= Time.deltaTime;
+
+        if (walkTime < 0)
+        {
+            GlobalVariable.atWork = true;
+        }
     }
 }
 

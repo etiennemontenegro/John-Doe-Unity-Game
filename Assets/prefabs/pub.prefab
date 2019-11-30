@@ -98,7 +98,7 @@ MonoBehaviour:
   hasSpawned: 0
   HasClicked: 1
   pubNumber: 0
-  han: {fileID: 6654495124468356177, guid: d793b0090fac08b418bd943db71eb527, type: 3}
+  handler: {fileID: 0}
 --- !u!54 &5520582798131921114
 Rigidbody:
   m_ObjectHideFlags: 0

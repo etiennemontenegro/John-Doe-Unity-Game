@@ -120,6 +120,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &74847333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6654495124468356177, guid: d793b0090fac08b418bd943db71eb527,
+    type: 3}
+  m_PrefabInstance: {fileID: 6654495124715507129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &74847336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74847333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59686f81aa354934a9f26c9db8db40dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1940032885}
+  isNight: 0
 --- !u!1 &1670595046
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +232,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1940032885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1565894716378456896, guid: 53cfca46110919d4da970741163f86f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3205948549709871204}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1967473161
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +460,17 @@ PrefabInstance:
     - target: {fileID: 6654495124468356176, guid: d793b0090fac08b418bd943db71eb527,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654495124468356179, guid: d793b0090fac08b418bd943db71eb527,
+        type: 3}
+      propertyPath: Work
+      value: 
+      objectReference: {fileID: 8928722076419845442, guid: c20b94eadcc471644ba9a9c54c42eb69,
+        type: 3}
+    - target: {fileID: 6654495124468356179, guid: d793b0090fac08b418bd943db71eb527,
+        type: 3}
+      propertyPath: hasArrived
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
