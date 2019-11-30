@@ -53,13 +53,13 @@ public class SceneHandler : MonoBehaviour
       //  }
     }
 
-    void scene1To2() //TRAVEL TO WORK
+   public void scene1To2() //TRAVEL TO WORK
     {
-        if( GlobalVariable.walkToWork)
-        {
+        Debug.Log("gg");
+       
             GlobalVariable.sceneIndex = 2;
             SwitchScene(GlobalVariable.sceneIndex);
-        }
+        
     }
 
     void scene2To1() //WORK TO TRAVEL

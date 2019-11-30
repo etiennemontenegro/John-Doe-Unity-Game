@@ -9,7 +9,7 @@ public class ObjectSpawner : MonoBehaviour
     static public int amountPubs;
     
     static public bool hasSpawned = false;
-    public bool hasArrived = false;
+    static public bool hasArrived;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,8 @@ public class ObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    hasArrived = GlobalVariable.hasArrived;
+
 
 
 
