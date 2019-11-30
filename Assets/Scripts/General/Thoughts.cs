@@ -20,7 +20,7 @@ public class Thoughts : MonoBehaviour
 
     public IEnumerator myThoughts() {
 
-        if (AlreadyDone == false && GLOBAL_VARS_ANTHO._IsMorning == true) {
+        if (AlreadyDone == false && GlobalVariable.morning == true) {
             Debug.Log("MIKE play too stress sound");
             //MIKE play too stress sound
             AlreadyDone = true;
@@ -28,7 +28,7 @@ public class Thoughts : MonoBehaviour
             yield return null;
         }
 
-        if (AlreadyDone == false && GLOBAL_VARS_ANTHO._IsNight == true)
+        if (AlreadyDone == false && GlobalVariable.morning != true)
         {
             Debug.Log("MIKE play too tired sound");
             //MIKE play too tired sound
