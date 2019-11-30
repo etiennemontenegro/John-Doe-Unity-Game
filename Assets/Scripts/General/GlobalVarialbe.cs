@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Whatever : MonoBehaviour
+public class GlobalVariable : MonoBehaviour
 {
 
     //GENERAL
