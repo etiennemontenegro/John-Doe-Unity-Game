@@ -28,13 +28,15 @@ public class Click_Manager : MonoBehaviour
 
             if (hit.collider != null) {
 
+                #region DOOR
+
                 if (hit.transform.tag == "Door")
                 {
 
                     if (GLOBAL_VARS_ANTHO._IsTooTired == true)
                     {
                         //Mike put error sound here;
-                        Debug.Log("I can't qui my home");
+                        Debug.Log("I can't quit my home");
                         
                        
                     }
@@ -45,9 +47,69 @@ public class Click_Manager : MonoBehaviour
                         //Change scene to sam's one;
                     }
                 }
+
+                #endregion
+
+                #region TV
+
+                if (hit.transform.tag == "TV") {
+
+                    if (GLOBAL_VARS_ANTHO._IsTooTired == true)
+                    {
+                        //Mike put error sound here;
+                        Debug.Log("I can't watch tv");
+
+
+                    }
+                    else
+                    {
+                        //Mike put dialog tv sound here;
+                        Debug.Log("I dont want to watch tv");
+                        
+                       
+                    }
+                }
+
+                #endregion
+
+                #region TABLE   
+
+                if (hit.transform.tag == "Table")
+                {
+                  
+                        //Mike put dialog sound here;
+                        Debug.Log("Its a good table");
+                 
+                }
+
+                #endregion
+
+                #region PHONE
+
+                if (hit.transform.tag == "Phone")
+                {
+
+                    if (GLOBAL_VARS_ANTHO._IsTooTired == true)
+                    {
+                        //Mike put error sound here;
+                        Debug.Log("I'm too tired");
+
+
+                    }
+                    else
+                    {
+                        //Mike put dialog tv sound here;
+                        Debug.Log("I have no friends");
+
+
+                    }
+                }
+
+                #endregion
+
             }
-           
-            
+
+
         }
     }
 
