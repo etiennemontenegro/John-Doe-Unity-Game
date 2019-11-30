@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject Work;
+    public GameObject Work,Home;
     public GameObject SpawnedObject;
     static public int amountPubs;
     
@@ -25,9 +25,16 @@ public class ObjectSpawner : MonoBehaviour
         if (!hasSpawned)
         {
 
-            if (hasArrived)
+            if (hasArrived && !playerHandler.isNight)
             {
                 Instantiate(Work);
+                Destroy(this);
+                return;
+            }
+
+            if (hasArrived && playerHandler.isNight)
+            {
+                Instantiate(Home);
                 Destroy(this);
                 return;
             }
