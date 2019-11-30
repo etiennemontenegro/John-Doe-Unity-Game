@@ -726,5 +726,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9071512415387388890, guid: 971d5c03eb4dc3e4fab81ab60cfaa7b6,
         type: 3}
+    - target: {fileID: 8985714537578734905, guid: e67abf64f18322345b1f759cfe116245,
+        type: 3}
+      propertyPath: newMonologue
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e67abf64f18322345b1f759cfe116245, type: 3}

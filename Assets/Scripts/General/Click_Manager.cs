@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Click_Manager : MonoBehaviour
 {
 
     public SceneHandler doorExitScene;
+
 
 
     // Start is called before the first frame update
@@ -19,6 +21,8 @@ public class Click_Manager : MonoBehaviour
     void Update()
     {
         DetectElement();
+
+
     }
 
     public void DetectElement() {
@@ -37,79 +41,98 @@ public class Click_Manager : MonoBehaviour
 
                     if (GlobalVariable._IsTooTired == true)
                     {
-                        //Mike put error sound here;
-                        Debug.Log("I can't quit my home");
-                        
-                       
+                        //Mike put ERROR sound here;                
                     }
                     else {
-                        //Mike put DOOR sound here;
-                        Debug.Log("I quit my home");
+                        //Mike put DOOR sound here;               
                         doorExitScene.scene0To1();
                         //Change scene to sam's one;
                     }
                 }
 
                 #region TV   
-                /*
+                
 
 
                                 if (hit.transform.tag == "TV") {
 
-                                    if (GLOBAL_VARS_ANTHO._IsTooTired == true)
+                                    if (GlobalVariable._IsTooTired == true)
                                     {
                                         //Mike put error sound here;
-                                        Debug.Log("I can't watch tv");
-
+                                        Debug.Log("I'm too tired to watch TV");
 
                                     }
                                     else
                                     {
                                         //Mike put dialog tv sound here;
-                                        Debug.Log("I dont want to watch tv");
+                                       Debug.Log(" I don't want to watch tv");
 
 
-                                    }
+                    }
                                 }
 
-                                #endregion
+               #endregion
 
-                                #region TABLE   
+                #region TABLE   
 
-                                if (hit.transform.tag == "Table")
-                                {
+                if (hit.transform.tag == "Table")
+                {
 
-                                        //Mike put dialog sound here;
-                                        Debug.Log("Its a good table");
+                        //Mike put dialog sound here;
+                        Debug.Log("Its a good table");
 
-                                }
+                }
 
-                                #endregion
+                #endregion
 
-                                #region PHONE
+                #region PHONE
 
-                                if (hit.transform.tag == "Phone")
-                                {
+                if (hit.transform.tag == "Phone")
+                {
 
-                                    if (GLOBAL_VARS_ANTHO._IsTooTired == true)
-                                    {
-                                        //Mike put error sound here;
-                                        Debug.Log("I'm too tired");
-
-
-                                    }
-                                    else
-                                    {
-                                        //Mike put dialog tv sound here;
-                                        Debug.Log("I have no friends");
+                    if (GlobalVariable._IsTooTired == true)
+                    {
+                        //Mike put error sound here;
+                        Debug.Log("I'm too tired");
 
 
-                                    }
-                                }
+                    }
+                    else
+                    {
+                        //Mike put dialog tv sound here;
+                        Debug.Log("I have no friends");
 
-                                
 
-                    */
+                    }
+                }
+
+
+
+
+
+                #endregion
+
+                #region FRIDGE
+
+                if (hit.transform.tag == "Fridge")
+                {
+
+                    if (GlobalVariable._IsTooTired == true || GlobalVariable.morning == false)
+                    {
+                        //Mike put error sound here;
+                        Debug.Log("Im not angry");
+                    }
+                }
+
+                #endregion
+
+                #region CALENDAR
+
+                if (hit.transform.tag == "Calendar")
+                {
+
+                    Debug.Log("I have a busy schedule");
+                }
 
                 #endregion
             }
