@@ -31,7 +31,7 @@ public class pubBehavior : MonoBehaviour
 
 
         pubNumber = Random.Range(1,10);
-      ;
+    
     }
 
     // Update is called once per frame
