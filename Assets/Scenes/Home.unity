@@ -420,12 +420,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c507bd2d0bde42b4da7e2ecce8593430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fridge: []
+  Chair: []
+  Table: []
   TV:
   - {fileID: 324552514}
   - {fileID: 8013172686929230844}
-  Chair: []
-  Table: []
-  Fridge: []
+  Tablette: []
+  Sofa: []
+  Bed: []
+  TabletteTV: []
+  Etagere: []
+  Lamp: []
+  Poster: []
 --- !u!4 &1538309460
 Transform:
   m_ObjectHideFlags: 0
@@ -689,6 +696,11 @@ PrefabInstance:
     - target: {fileID: 6110695280115720239, guid: 57c8734c6fa3f8949be0a729b9a51c89,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799292070180472252, guid: 57c8734c6fa3f8949be0a729b9a51c89,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
