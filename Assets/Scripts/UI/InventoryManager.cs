@@ -4,11 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+// Script that populates the Store Window on store load 
+// as well as managing player interaction with the inventory.
+
 public class InventoryManager : MonoBehaviour
 {
-    public List<StoreItemBox> storeDisplayItems;
+    public List<StoreItemBox> storeDisplayItems;    // List of items to display in the store
+    public List<GameObject> storeAllItems;          // List of all items displayed in store as GameObjects
+    public List<GameObject> selectedItems;          // List of selected items as GameObjects
+    public List<string> selectedItemNames;          // List of selected items by name
 
-    public bool displayStoreItems = false;
+    public static int totalPrice = 0;
 
     private GameObject StoreRef;
 
@@ -18,30 +24,60 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     private GameObject itemTemplate;
 
-    void Start() // Should be onEnable?
+    void OnEnable() // OnEnable to populate whenever the Store is opened
     {
         storeDisplayItems = new List<StoreItemBox>();
-
-        //Debug.Log("InventoryManager Running now (Should be Last)");
 
         StoreRef = GameObject.Find("StoreWindow");
 
         for (int i = 0; i < 30; i++)
         {
             StoreItemBox newItem = new StoreItemBox();
-            if (StoreRef.GetComponent<StoreSetup>().storeItems[i].purchased == false)
-            {
-                storeDisplayItems.Add(newItem);
-                storeDisplayItems[i].itemSprite = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemSprite;
-                storeDisplayItems[i].itemName = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemName;
-                storeDisplayItems[i].itemPrice = StoreRef.GetComponent<StoreSetup>().storeItems[i].price;
-            }
+
+            storeDisplayItems.Add(newItem);
+            storeDisplayItems[i].itemSprite = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemSprite;
+            storeDisplayItems[i].itemName = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemName;
+            storeDisplayItems[i].itemPrice = StoreRef.GetComponent<StoreSetup>().storeItems[i].price;
+            storeDisplayItems[i].purchased = StoreRef.GetComponent<StoreSetup>().storeItems[i].purchased;
         }
 
         GenerateStoreInventory();
+
     }
 
-    void GenerateStoreInventory()
+    void Update()
+    {
+        foreach(GameObject storeItemElement in storeAllItems)
+        {
+            string myName = storeItemElement.GetComponent<StoreItemHandler>().LocalNameLabel.text.ToString();
+            int myPrice = int.Parse(storeItemElement.GetComponent<StoreItemHandler>().LocalitemPrice.text.ToString());
+
+            if (storeItemElement.GetComponent<Toggle>().isOn == true)
+            {
+                if(selectedItemNames.Contains(myName))
+                {
+
+                }
+                else
+                {
+                    selectedItems.Add(storeItemElement);
+                    selectedItemNames.Add(myName);
+                    totalPrice += myPrice;
+                }
+            }
+            else if(storeItemElement.GetComponent<Toggle>().isOn == false)
+            {
+                if(selectedItemNames.Contains(myName))
+                {
+                    selectedItemNames.Remove(myName);
+                    selectedItems.Remove(storeItemElement);
+                    totalPrice -= myPrice;
+                }
+            }
+        }
+    }
+
+    void GenerateStoreInventory() // Populates the Store Window
     {
         foreach (StoreItemBox newStoreItem in storeDisplayItems)
         {
@@ -51,14 +87,40 @@ public class InventoryManager : MonoBehaviour
             newItem.GetComponent<StoreItemHandler>().SetAttributes(newStoreItem.itemSprite, newStoreItem.itemName, newStoreItem.itemPrice);
 
             newItem.transform.SetParent(itemTemplate.transform.parent, false);
+
+            if (newStoreItem.purchased)
+            {
+                newItem.GetComponent<Toggle>().interactable = false;
+            }
+
+            storeAllItems.Add(newItem); 
         }
     }
 
+    void OnDisable()
+    {
+        DeleteEverything();
+    }
+
+    void DeleteEverything()
+    {
+        if(storeAllItems.Count > 0)
+        {
+            foreach(GameObject item in storeAllItems)
+            {
+                Destroy(item.gameObject);
+            }
+        }
+
+        storeAllItems.Clear();
+        storeDisplayItems.Clear();
+    }
 }
 
-public class StoreItemBox
+public class StoreItemBox // Class & properties for an item box in the Store Window
 {
     public Sprite itemSprite;
     public string itemName;
     public int itemPrice;
+    public bool purchased;
 }

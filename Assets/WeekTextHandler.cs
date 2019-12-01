@@ -16,6 +16,7 @@ public class WeekTextHandler : MonoBehaviour
 
         // To Fade In Text
         //StartCoroutine(FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
+        //print("Day index before Fade In: " + GlobalVariable.day);
     }
 
     void Update()
@@ -25,6 +26,9 @@ public class WeekTextHandler : MonoBehaviour
 
     public IEnumerator FadeTextToFullAlpha(float t, Text i)
     {
+        //print("Day index before Fade In: " + GlobalVariable.day + "!!!!!!!!!!!!!!!!!!!!!!");
+        dayTextField.text = dayNames[GlobalVariable.day];
+        StartCoroutine("WaitForFadeOut");
         i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
         while (i.color.a < 1.0f)
         {
@@ -34,12 +38,18 @@ public class WeekTextHandler : MonoBehaviour
     }
 
     public IEnumerator FadeTextToZeroAlpha(float t, Text i)
-    {
+    {        
         i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
         while (i.color.a > 0.0f)
         {
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
             yield return null;
         }
+    }
+
+    public IEnumerator WaitForFadeOut()
+    {        
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(FadeTextToZeroAlpha(1f, dayTextField.GetComponent<Text>()));
     }
 }
