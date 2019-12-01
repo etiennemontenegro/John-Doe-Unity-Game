@@ -15,7 +15,7 @@ public class Switch_decoration_Home : MonoBehaviour
     static public int activeIndexTable = 0;
 
     public GameObject[] TV; 
-    static public int activeIndexTV = 0;
+    static public int activeIndexTV = 1;
 
     public GameObject[] Tablette;
     static public int activeIndexTablette = 0;
@@ -33,10 +33,10 @@ public class Switch_decoration_Home : MonoBehaviour
     static public int activeIndexEtagere = 0;
 
     public GameObject[] Lamp;
-    static public int activeIndexLamp = 0; 
+    static public int activeIndexLamp = 2; 
 
-    public GameObject[] Poster;
-    static public int activeIndexPoster = 0;
+    //public GameObject[] Poster;
+  //  static public int activeIndexPoster = 0;
 
 
     // Start is called before the first frame update
@@ -56,7 +56,7 @@ public class Switch_decoration_Home : MonoBehaviour
         SwitchElementsLamp(activeIndexLamp);
         SwitchElementsSofa(activeIndexSofa);
         SwitchElementsBed(activeIndexBed);
-        SwitchElementsPoster(activeIndexPoster);
+        //SwitchElementsPoster(activeIndexPoster);
         SwitchElementsTablette(activeIndexTablette);
         SwitchElementsEtagere(activeIndexEtagere);
         SwitchElementsTabletteTV(activeIndexTabletteTV);
@@ -155,7 +155,7 @@ public class Switch_decoration_Home : MonoBehaviour
 
     }
 
-    public void SwitchElementsPoster(int aIndex)
+    /*public void SwitchElementsPoster(int aIndex)
     {
 
         activeIndexPoster = aIndex;
@@ -166,7 +166,7 @@ public class Switch_decoration_Home : MonoBehaviour
             Poster[i].SetActive(i == activeIndexPoster);
         }
 
-    }
+    }*/
 
     public void SwitchElementsTablette(int aIndex)
     {
