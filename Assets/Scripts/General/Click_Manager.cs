@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class Click_Manager : MonoBehaviour
 {
-    public Animator fadeAnimator;
-    public SceneHandler doorExitScene;
+    
+    private SceneHandler doorExitScene;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        doorExitScene = GameObject.Find("PrefabGameLogic").GetComponent<SceneHandler>();
     }
 
     // Update is called once per frame
@@ -39,13 +40,14 @@ public class Click_Manager : MonoBehaviour
                    
 
 
-                    if (GlobalVariable._IsTooTired == true)
+                    if (GlobalVariable.morning != true)
                     {
                         //Mike put ERROR sound here;                
                     }
                     else {
                         //Mike put DOOR sound here;               
-                        fadeAnimator.SetBool("PlayFade", true);
+                        GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
+
                         StartCoroutine(FadeCoroutine());
                         //Change scene to sam's one;
                     }
@@ -136,6 +138,14 @@ public class Click_Manager : MonoBehaviour
                 }
 
                 #endregion
+
+                if (hit.transform.tag == "Bed" && GlobalVariable.morning != true) {
+                    Debug.Log("Jai hit le lit");
+                    GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
+                    StartCoroutine(FadeCoroutine());
+                    GlobalVariable.day++;
+                    GlobalVariable.morning = true;
+                }
             }
 
 
