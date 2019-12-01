@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class hittingWork : MonoBehaviour
 {
-   public SceneHandler changingScene;
-   private GameObject work,player;
+    public SceneHandler changingScene;
+    private GameObject work,player;
     private float moveSpeed = .05f;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,6 @@ public class hittingWork : MonoBehaviour
         work = gameObject;
 
         player = GameObject.FindGameObjectWithTag("Player");
-
-
-
     }
 
     // Update is called once per frame
@@ -30,21 +27,18 @@ public class hittingWork : MonoBehaviour
         }
     }
 
-
     void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
-        {
-           
-            changingScene.scene1To2();
-        }
-
-       
-
+        {                  
+            GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
+            StartCoroutine(FadeCoroutine());
+        }   
     }
 
-
+    IEnumerator FadeCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        changingScene.scene1To2();
+    }
 }
-
-
-

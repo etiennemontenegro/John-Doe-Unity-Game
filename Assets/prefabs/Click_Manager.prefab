@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56313bd42e7a04fa1d299519d0604c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeAnimator: {fileID: 0}
+  fadeAnimator: {fileID: 881320097277898148, guid: 4321717af087ce944ac617d5b7da5f52,
+    type: 3}
   doorExitScene: {fileID: 9071512415387388890, guid: f82943a02bc14874fb1cf4a79bd49853,
     type: 3}

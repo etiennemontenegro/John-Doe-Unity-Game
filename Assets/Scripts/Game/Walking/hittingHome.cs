@@ -32,11 +32,15 @@ public class hittingHome : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("test");
-            changingScene.scene1To0();
+            //Debug.Log("test");
+            GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
+            StartCoroutine(FadeCoroutine());            
         }
+    }
 
-
-
+    IEnumerator FadeCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        changingScene.scene1To0();
     }
 }
