@@ -148,17 +148,15 @@ public class Click_Manager : MonoBehaviour
                 if (hit.transform.tag == "Bed" && GlobalVariable.morning != true) {
                     Debug.Log("Jai hit le lit");
                     // Start Fade without changing scene
-                    GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
-
-                    // Show Day
-                    StartCoroutine(GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
-                    //GetComponent<WeekTextHandler>().StartCoroutine(FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
-
-
+                    GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);   
 
                     //GlobalVariable.day++;
                     week.DayIsOver();
                     GlobalVariable.morning = true;
+
+                    // Show Day
+                    StartCoroutine(GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
+                    //print("DAY WAS UPDATED");
                 }
             }
 
