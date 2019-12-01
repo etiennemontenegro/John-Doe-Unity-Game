@@ -67,7 +67,14 @@ public class WeekHandler : MonoBehaviour
     {
         GlobalVariable.day++;
         
-        if (GlobalVariable.day > 6)
+        if(GlobalVariable.day == 5 )
+        {
+            GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck;
+            GlobalVariable.paycheck = 0;
+
+        }
+
+        if (GlobalVariable.day > 5)
         {
             GlobalVariable.day = 0;
             GlobalVariable.weekend = false;
