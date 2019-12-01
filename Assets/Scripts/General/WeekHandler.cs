@@ -23,7 +23,7 @@ public class WeekHandler : MonoBehaviour
     {
 
         money = GameObject.Find("PrefabGameLogic").GetComponent<MoneyManagment>();
-
+        GameObject.Find("UIFactureWeekend").SetActive(false);
         walkTime = _walkTime;
         weekendTime = _weekendTime;
         workTime = _workTime;
@@ -70,16 +70,20 @@ public class WeekHandler : MonoBehaviour
    public void DayIsOver()
     {
         GlobalVariable.day++;
-        
-        if(GlobalVariable.day == 5 )
+        Debug.Log("Day :" + GlobalVariable.day);
+        Debug.Log("morning :" + GlobalVariable.morning);
+        if (GlobalVariable.day == 5 )
         {
-            
+            Debug.Log("inside if statement");
             money.RandomDeduction((float)GlobalVariable.paycheck);
-           
+
 
             //ENVOYER LES DONNÉES A CATHRINE
             //afficher son UI
-            GameObject.Find("UIFactureWeekend").SetActive(true);
+            if (GlobalVariable.morning)
+            {
+                GameObject.Find("UIFactureWeekend").SetActive(true);
+            }
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck - MoneyManagment.total;
             GlobalVariable.paycheck = 0;
 

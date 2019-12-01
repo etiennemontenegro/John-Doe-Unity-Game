@@ -58,5 +58,10 @@ public class StoreCommander : MonoBehaviour
         }
 
         GlobalVariable.wallet -= StoreSolde.solde;
+
+        for(int i = 0; i < 30; i++)
+        {
+            Debug.Log(StoreRef.GetComponent<StoreSetup>().storeItems[i].purchased);
+        }
     }
 }
