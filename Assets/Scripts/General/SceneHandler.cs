@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 
 
@@ -10,11 +10,12 @@ public class SceneHandler : MonoBehaviour
 {
 
     public WeekHandler week;
-
+    public Text dayTextField;
+    private string[] dayNames = new string[] { "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche" };
 
     void Start()
     {
-      
+        dayTextField.text = dayNames[GlobalVariable.day];
     }
 
     // Update is called once per frame
