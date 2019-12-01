@@ -44,7 +44,7 @@ public class Click_Manager : MonoBehaviour
                     {
                         //Mike put ERROR sound here;                
                     }
-                    else {
+                    if (GlobalVariable.morning == true && GlobalVariable.weekend != false){
                         //Mike put DOOR sound here;               
                         GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
 
