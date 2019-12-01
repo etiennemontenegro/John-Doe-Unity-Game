@@ -87,12 +87,11 @@ public class WeekHandler : MonoBehaviour
 
         if (GlobalVariable.day == 5 && GlobalVariable.morning)
         {
-
             Debug.Log("inside if statement");
             money.RandomDeduction((float)GlobalVariable.paycheck);
-            UIfacture = GameObject.Find("BackgroundBlack");
-            //UIfacture.transform.position = new Vector3(960*0.5f+28.5f, 540*0.5f+16, 0);
-            UIfacture.transform.position = new Vector3(960, 540, 0);
+
+            StartCoroutine(FadeBill());
+            
 
             //ENVOYER LES DONNÉES A CATHRINE
             //afficher son UI
@@ -100,7 +99,6 @@ public class WeekHandler : MonoBehaviour
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck - MoneyManagment.total;
             Debug.Log("MY WALLET : " + GlobalVariable.wallet);
             GlobalVariable.paycheck = 0;
-
         }
 
         if (GlobalVariable.day > 5)
@@ -111,10 +109,15 @@ public class WeekHandler : MonoBehaviour
             Debug.Log("Reset weekend timer" + weekendTime);
         }
         Debug.Log("Day :" + GlobalVariable.day);
-        WeekendCheck();
+        WeekendCheck();      
 
-       
+    }
 
+    IEnumerator FadeBill()
+    {
+        yield return new WaitForSeconds(2.5f);
+        UIfacture = GameObject.Find("BackgroundBlack");
+        UIfacture.transform.position = new Vector3(960, 540, 0);
     }
 
 
@@ -127,9 +130,7 @@ public class WeekHandler : MonoBehaviour
 
         if (weekendTime < 0)
         {
-            GlobalVariable.weekend = false;
-            
-
+            GlobalVariable.weekend = false;    
         }
     }
 
