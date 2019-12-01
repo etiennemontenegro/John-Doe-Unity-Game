@@ -25,6 +25,7 @@ public class hittingHome : MonoBehaviour
             home.transform.Translate(1 * moveSpeed, 0, 0);
         else
         {
+            playerHandler.isScrolling = false;
             player.transform.position = new Vector3(player.transform.position.x - .05f, player.transform.position.y, player.transform.position.z);
         }
     }

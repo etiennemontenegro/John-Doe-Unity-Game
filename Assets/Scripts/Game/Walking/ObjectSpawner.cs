@@ -6,10 +6,13 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject Work,Home;
     public GameObject SpawnedObject;
+ 
     static public int amountPubs;
     
     static public bool hasSpawned = false;
     static public bool hasArrived;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +22,9 @@ public class ObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
       hasArrived = GlobalVariable.hasArrived;
-    
+  
 
 
 
