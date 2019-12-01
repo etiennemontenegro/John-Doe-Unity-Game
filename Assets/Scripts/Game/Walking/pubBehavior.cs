@@ -30,7 +30,7 @@ public class pubBehavior : MonoBehaviour
 
         // handler = GameObject.Find("StoreWindow");
         //Debug.Log(handler.GetComponent<StoreSetup>().storeItems[0].price);
-        myObjectValue = handler.GetComponent<StoreSetup>().storeItems[pubNumber].price.ToString();
+        myObjectValue = handler.GetComponent<StoreSetup>().storeItems[pubNumber].price.ToString() + "$ wow!";
         drawing.GetComponent<SpriteRenderer>().sprite = handler.GetComponent<StoreSetup>().storeItems[pubNumber].itemSprite;
         TextPro.text = myObjectValue;
 
