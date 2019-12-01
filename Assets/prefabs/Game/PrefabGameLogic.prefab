@@ -193,7 +193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9071512415387388888
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb7ca75eec1e774db9f346a9444e89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchScene: {fileID: 9071512415387388890}
+  interaction: {fileID: 6699062606256597056, guid: 05da3b43dd45ee146bebbd04be62358e,
+    type: 3}
 --- !u!114 &6001529333230848063
 MonoBehaviour:
   m_ObjectHideFlags: 0
