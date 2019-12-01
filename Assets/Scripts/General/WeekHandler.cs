@@ -21,9 +21,9 @@ public class WeekHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        interaction = GameObject.Find("PrefabGameLogic").GetComponent<WorkInteraction>();
         money = GameObject.Find("PrefabGameLogic").GetComponent<MoneyManagment>();
-        GameObject.Find("UIFactureWeekend").SetActive(false);
+        //GameObject.Find("UIFactureWeekend").SetActive(false);
         walkTime = _walkTime;
         weekendTime = _weekendTime;
         workTime = _workTime;
@@ -33,6 +33,7 @@ public class WeekHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(GlobalVariable.walkToWork);
 
         if (GlobalVariable.walkToWork)
         {
@@ -140,9 +141,9 @@ public class WeekHandler : MonoBehaviour
 
         void walkTimer()
         {
-
+            
             walkTime -= Time.deltaTime;
-        
+            Debug.Log(walkTime);
         
             if (walkTime < 0)
             {
