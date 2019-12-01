@@ -91,7 +91,8 @@ public class WeekHandler : MonoBehaviour
             Debug.Log("inside if statement");
             money.RandomDeduction((float)GlobalVariable.paycheck);
             UIfacture = GameObject.Find("BackgroundBlack");
-            UIfacture.transform.position = new Vector3(960*0.5f+28.5f, 540*0.5f+16, 0);
+            //UIfacture.transform.position = new Vector3(960*0.5f+28.5f, 540*0.5f+16, 0);
+            UIfacture.transform.position = new Vector3(960, 540, 0);
 
             //ENVOYER LES DONNÉES A CATHRINE
             //afficher son UI
