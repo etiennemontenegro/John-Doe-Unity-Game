@@ -7,7 +7,7 @@ public class pubBehavior : MonoBehaviour
     public GameObject pub;
    
 
-    public float moveSpeed =.1f;
+    public float moveSpeed =.05f;
     private bool HitPlayer = false;
     private bool IsMorning=false,IsNight=false;
     public bool hasSpawned = false;
