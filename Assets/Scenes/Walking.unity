@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1537819544}
   - component: {fileID: 1537819543}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: night
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
