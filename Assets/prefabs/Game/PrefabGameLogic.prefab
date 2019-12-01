@@ -194,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9071512415387388888
 Transform:
   m_ObjectHideFlags: 0
@@ -369,22 +369,22 @@ PrefabInstance:
     - target: {fileID: 4983723164949373855, guid: 70b7206b4cdff5047aab0192d0530771,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 4983723164949373855, guid: 70b7206b4cdff5047aab0192d0530771,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 4983723164949373855, guid: 70b7206b4cdff5047aab0192d0530771,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 400.8
       objectReference: {fileID: 0}
     - target: {fileID: 4983723164949373855, guid: 70b7206b4cdff5047aab0192d0530771,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 144.2
       objectReference: {fileID: 0}
     - target: {fileID: 4983723164949373855, guid: 70b7206b4cdff5047aab0192d0530771,
         type: 3}
@@ -415,6 +415,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109752394303082253, guid: 70b7206b4cdff5047aab0192d0530771,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109752394303082253, guid: 70b7206b4cdff5047aab0192d0530771,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109752394303082253, guid: 70b7206b4cdff5047aab0192d0530771,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109752394303082253, guid: 70b7206b4cdff5047aab0192d0530771,
+        type: 3}
+      propertyPath: m_Text
+      value: Mercredi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109752394303082253, guid: 70b7206b4cdff5047aab0192d0530771,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b7206b4cdff5047aab0192d0530771, type: 3}
