@@ -7,6 +7,7 @@ public class WeekHandler : MonoBehaviour
 
     public SceneHandler switchScene;
     public WorkInteraction interaction;
+    public MoneyManagment money;
     public static float _walkTime = 5;
     public static float _weekendTime = 120;
     public static float _workTime = 5;
@@ -20,6 +21,9 @@ public class WeekHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        money = GameObject.Find("PrefabGameLogic").GetComponent<MoneyManagment>();
+
         walkTime = _walkTime;
         weekendTime = _weekendTime;
         workTime = _workTime;
@@ -70,6 +74,8 @@ public class WeekHandler : MonoBehaviour
         if(GlobalVariable.day == 5 )
         {
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck;
+            money.RandomDeduction((float)GlobalVariable.paycheck);
+            //ENVOYER LES DONNÉES A CATHRINE
             GlobalVariable.paycheck = 0;
 
         }
