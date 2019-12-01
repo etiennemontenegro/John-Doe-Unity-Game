@@ -8,9 +8,9 @@ public class StoreItemHandler : MonoBehaviour
     [SerializeField]
     private Image LocalitemSprite;
     [SerializeField]
-    private Text LocalNameLabel;
+    public Text LocalNameLabel;
     [SerializeField]
-    private Text LocalitemPrice;
+    public Text LocalitemPrice;
 
     public void SetAttributes(Sprite itemSprite, string itemName, int itemPrice)
     {

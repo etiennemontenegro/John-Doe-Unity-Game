@@ -30,7 +30,6 @@ public class StoreSetup : MonoBehaviour
             itemData = JsonUtility.FromJson<ItemList>(jsonString);
         }
 
-        //Debug.Log("StoreSetup Running now (Should be #1)");
         if (!setupHasRan)
         {
             for (int i = 0; i < 30; i++)
@@ -44,11 +43,6 @@ public class StoreSetup : MonoBehaviour
             
         }
         setupHasRan = true;
-    }
-
-    void Start()
-    {
-        
     }
 }
 
