@@ -2,8 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+/// Ajouter comparation de qualité si 2 items de meme  familles sont acheter par le joeur.
+/// la qualitté la plus haute l'emporte
+
 public class Switch_decoration_Home : MonoBehaviour
 {
+
+    public GameObject myStoreWindow;
+    private int newStore;
+    private int storeStore;
+
+    private bool TriggerDetection;
+
+    public int maxIndex;
+    public bool isBought;
 
     public GameObject[] Fridge;
     static public int activeIndexFridge = 0;
@@ -36,13 +50,14 @@ public class Switch_decoration_Home : MonoBehaviour
     static public int activeIndexLamp = 2; 
 
     //public GameObject[] Poster;
-  //  static public int activeIndexPoster = 0;
+    //static public int activeIndexPoster = 0;
 
 
-    // Start is called before the first frame update
+    // Start is called befxore the first frame update
     void Start()
     {
-       
+        newStore =  myStoreWindow.GetComponent<StoreSetup>().storeItems[0].quality - 1;
+     
 
     }
 
@@ -60,6 +75,29 @@ public class Switch_decoration_Home : MonoBehaviour
         SwitchElementsTablette(activeIndexTablette);
         SwitchElementsEtagere(activeIndexEtagere);
         SwitchElementsTabletteTV(activeIndexTabletteTV);
+
+        if (TriggerDetection == false) {
+            DetectElements();
+        }
+        
+
+    }
+
+    public void DetectElements()
+    {
+
+        //Detect if any item is purchase;
+        for (int i = 0; i <= 29; i++)
+        {
+
+            isBought = myStoreWindow.GetComponent<StoreSetup>().storeItems[i].purchased;
+            //Debug.Log(isBought);
+
+            TriggerDetection = true;
+
+        }
+
+
     }
 
     public void SwitchElementsTV(int aIndex) {
@@ -210,6 +248,8 @@ public class Switch_decoration_Home : MonoBehaviour
 
     }
 
+
+   
 
 
 }

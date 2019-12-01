@@ -17,6 +17,15 @@ public class playerHandler : MonoBehaviour
        // GlobalVariable.walkToWork = true;
         isNight = !GlobalVariable.morning;
        if(isNight)player.transform.position = new Vector3(player.transform.position.x * -1, player.transform.position.y, player.transform.position.z);
+
+       if(GlobalVariable.morning == true)
+        {
+            GameObject.Find("JohnDoe_Walking").GetComponent<Animator>().SetBool("WalkingBack", false);
+        } else
+        {
+            GameObject.Find("JohnDoe_Walking").GetComponent<Animator>().SetBool("WalkingBack", true);
+        }
+        
     }
 
     // Update is called once per frame

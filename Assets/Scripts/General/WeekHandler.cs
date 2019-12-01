@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class WeekHandler : MonoBehaviour
 {
@@ -17,13 +19,19 @@ public class WeekHandler : MonoBehaviour
    public static float weekendTime;
    public static float workTime;
 
-
+    //GameObject UIfactureParent;
+    private GameObject UIfacture;
     // Start is called before the first frame update
     void Start()
     {
 
+        UIfacture = GameObject.Find("BackgroundBlack");
+       // UIfacture.transform.position = new Vector3(0, -1000, 0);
+        //UIfacture = UIfactureParent.transform.Find("UIFactureWeekend").gameObject;
+
+        interaction = GameObject.Find("PrefabGameLogic").GetComponent<WorkInteraction>();
         money = GameObject.Find("PrefabGameLogic").GetComponent<MoneyManagment>();
-        GameObject.Find("UIFactureWeekend").SetActive(false);
+        //GameObject.Find("UIFactureWeekend").SetActive(false);
         walkTime = _walkTime;
         weekendTime = _weekendTime;
         workTime = _workTime;
@@ -33,6 +41,7 @@ public class WeekHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(GlobalVariable.walkToWork);
 
         if (GlobalVariable.walkToWork)
         {
@@ -63,6 +72,7 @@ public class WeekHandler : MonoBehaviour
             
             GlobalVariable.weekend = true;
             Debug.Log("ITS THE WEEKEND");
+            Debug.Log("Weekend: " + GlobalVariable.weekend + "|| Morning : " + GlobalVariable.morning);
         }
         
     }
@@ -70,21 +80,25 @@ public class WeekHandler : MonoBehaviour
    public void DayIsOver()
     {
         GlobalVariable.day++;
+        GlobalVariable.morning = true;
+
         Debug.Log("Day :" + GlobalVariable.day);
         Debug.Log("morning :" + GlobalVariable.morning);
-        if (GlobalVariable.day == 5 )
+
+        if (GlobalVariable.day == 5 && GlobalVariable.morning)
         {
+
             Debug.Log("inside if statement");
             money.RandomDeduction((float)GlobalVariable.paycheck);
-
+            UIfacture = GameObject.Find("BackgroundBlack");
+            //UIfacture.transform.position = new Vector3(960*0.5f+28.5f, 540*0.5f+16, 0);
+            UIfacture.transform.position = new Vector3(960, 540, 0);
 
             //ENVOYER LES DONNÉES A CATHRINE
             //afficher son UI
-            if (GlobalVariable.morning)
-            {
-                GameObject.Find("UIFactureWeekend").SetActive(true);
-            }
+
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck - MoneyManagment.total;
+            Debug.Log("MY WALLET : " + GlobalVariable.wallet);
             GlobalVariable.paycheck = 0;
 
         }
@@ -98,6 +112,8 @@ public class WeekHandler : MonoBehaviour
         }
         Debug.Log("Day :" + GlobalVariable.day);
         WeekendCheck();
+
+       
 
     }
 
@@ -140,9 +156,9 @@ public class WeekHandler : MonoBehaviour
 
         void walkTimer()
         {
-
+            
             walkTime -= Time.deltaTime;
-        
+            //Debug.Log(walkTime);
         
             if (walkTime < 0)
             {

@@ -11,13 +11,13 @@ public class MoneyMontant01 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        txt01 = gameObject.GetComponent<Text>();
-        txt01.text = "Hydro Kebek: -" + MoneyManagment.montant1;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        txt01 = gameObject.GetComponent<Text>();
+        txt01.text = "Hydro Kebek: -" + MoneyManagment.montant1;
     }
 }

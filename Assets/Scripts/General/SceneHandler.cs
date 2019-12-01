@@ -21,10 +21,11 @@ public class SceneHandler : MonoBehaviour
 
     public void scene0To1() // HOUSE TO TRAVEL
     {
-     
+       
         GlobalVariable.sceneIndex = 1;           
         SwitchScene(GlobalVariable.sceneIndex );
         GlobalVariable.walkToWork = true;
+        Debug.Log("Switching from House to Walk");
     
     }
 
@@ -36,6 +37,7 @@ public class SceneHandler : MonoBehaviour
         GlobalVariable.atWork = true;
         WeekHandler.walkTime = WeekHandler._walkTime;
         Debug.Log("Reset walk timer : " + WeekHandler.walkTime);
+        Debug.Log("Switching from  Walk to work");
     }
 
    public void scene2To1() //WORK TO TRAVEL
@@ -45,6 +47,7 @@ public class SceneHandler : MonoBehaviour
         SwitchScene(GlobalVariable.sceneIndex);
         WeekHandler.workTime = WeekHandler._workTime;
         Debug.Log("Reset work timer : " + WeekHandler.workTime);
+        Debug.Log("Switching from work to Walk");
 
     }
 
@@ -57,6 +60,7 @@ public class SceneHandler : MonoBehaviour
         GlobalVariable.backHome = false;
         WeekHandler.walkTime = WeekHandler._walkTime;
         Debug.Log("Reset walk timer : " + WeekHandler.walkTime);
+        Debug.Log("Switching from  Walk to House");
 
 
     }
