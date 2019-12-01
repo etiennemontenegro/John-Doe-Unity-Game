@@ -5,27 +5,18 @@ using UnityEngine;
 public class MoneyManagment : MonoBehaviour
 {
 
-    public float montant1;
-    public float montant2;
-    public int total;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public static float montant1;
+    public static float montant2;
+    public static int montant3 = 5;
+    public static int total;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void RandomDeduction(float paycheck)
     {
         montant1 = (int)(Random.Range(0.01f, 0.25f) * paycheck);
         montant2 = (int)(Random.Range(0.01f, 0.25f) * paycheck);
 
-        total =(int)( paycheck - montant1 - montant2);
+        total =(int)( paycheck - montant1 - montant2 - montant3);
 
     }
 

@@ -15,9 +15,4 @@ public class textFacture : MonoBehaviour
         txt.text = "Paye : " + GlobalVariable.paycheck;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
