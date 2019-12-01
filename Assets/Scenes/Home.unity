@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &3008318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7193423074314356943, guid: 57c8734c6fa3f8949be0a729b9a51c89,
-    type: 3}
-  m_PrefabInstance: {fileID: 8013172686929230843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &30383797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -394,15 +388,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c507bd2d0bde42b4da7e2ecce8593430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tables:
-  - {fileID: 8013172686929230844}
+  TV:
   - {fileID: 324552514}
-  - {fileID: 3008318}
-  fridges: []
-  chairs: []
-  TV: []
-  sofas: []
-  beds: []
+  - {fileID: 8013172686929230844}
 --- !u!4 &1538309460
 Transform:
   m_ObjectHideFlags: 0
@@ -685,7 +673,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 57c8734c6fa3f8949be0a729b9a51c89, type: 3}
 --- !u!1 &8013172686929230844 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 410554270171997437, guid: 57c8734c6fa3f8949be0a729b9a51c89,
+  m_CorrespondingSourceObject: {fileID: 791731773184838188, guid: 57c8734c6fa3f8949be0a729b9a51c89,
     type: 3}
   m_PrefabInstance: {fileID: 8013172686929230843}
   m_PrefabAsset: {fileID: 0}

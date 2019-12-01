@@ -45,18 +45,22 @@ public class WeekHandler : MonoBehaviour
             WorkTimer();
         }
 
+        if( GlobalVariable.inStore)
+        {
+            WeekendTimer();
+        }
+
     }
 
     void WeekendCheck()
     {
         if (GlobalVariable.day >= 5)
         {
+            
             GlobalVariable.weekend = true;
+            Debug.Log("ITS THE WEEKEND");
         }
-        else
-        {
-            GlobalVariable.weekend = false;
-        }
+        
     }
 
    public void DayIsOver()
@@ -66,6 +70,7 @@ public class WeekHandler : MonoBehaviour
         if (GlobalVariable.day > 6)
         {
             GlobalVariable.day = 0;
+            GlobalVariable.weekend = false;
             weekendTime = _weekendTime;
             Debug.Log("Reset weekend timer" + weekendTime);
         }
