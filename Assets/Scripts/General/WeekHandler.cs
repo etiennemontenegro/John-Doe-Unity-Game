@@ -97,6 +97,7 @@ public class WeekHandler : MonoBehaviour
             //afficher son UI
 
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck - MoneyManagment.total;
+            Debug.Log("MY WALLET : " + GlobalVariable.wallet);
             GlobalVariable.paycheck = 0;
 
         }
