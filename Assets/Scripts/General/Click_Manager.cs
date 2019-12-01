@@ -55,7 +55,7 @@ public class Click_Manager : MonoBehaviour
                     }
                     if (GlobalVariable.morning == true && GlobalVariable.weekend == false){
                         //Mike put DOOR sound here;               
-                        porte.Play();
+                        //porte.Play();
                         GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
 
                         StartCoroutine(FadeCoroutine());

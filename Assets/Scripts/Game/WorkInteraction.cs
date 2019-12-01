@@ -6,6 +6,7 @@ public class WorkInteraction : MonoBehaviour
 {
 
   public static int count = 0;
+    private float typeCycle = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +16,38 @@ public class WorkInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnMouseDown()
     {
         count++;
-        //Debug.Log(count);
+
+        if(typeCycle < 11)
+        {
+            typeCycle++;
+        } 
+        else
+        {
+            typeCycle = 0;
+        }
+        Debug.Log("Count:" + count);
+        
+
+        if(typeCycle > 4 && typeCycle < 8)
+        {
+            //GameObject.Find("JohnDoeTyping").GetComponent<Animator>().Play("JohnDoeTyping", 0, 0.45f);
+            GameObject.Find("JohnDoeTyping").GetComponent<Animator>().Play("JohnDoeTyping", 0, typeCycle / 10f - 0.05f);
+        } else if(typeCycle > 7 && typeCycle < 11)
+        {            
+            GameObject.Find("JohnDoeTyping").GetComponent<Animator>().Play("JohnDoeTyping", 0, typeCycle / 10f - 0.1f);
+        } else if(typeCycle == 11){
+            GameObject.Find("JohnDoeTyping").GetComponent<Animator>().Play("JohnDoeTyping", 0, typeCycle / 10f - 0.15f);
+        }
+        else
+        {           
+            GameObject.Find("JohnDoeTyping").GetComponent<Animator>().Play("JohnDoeTyping", 0, typeCycle / 10f);
+        }      
     }
 
   public void UpdatePaycheck()

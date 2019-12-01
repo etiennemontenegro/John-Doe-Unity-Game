@@ -91,7 +91,7 @@ public class Switch_decoration_Home : MonoBehaviour
         {
 
             isBought = myStoreWindow.GetComponent<StoreSetup>().storeItems[i].purchased;
-            Debug.Log(isBought);
+            //Debug.Log(isBought);
 
             TriggerDetection = true;
 
