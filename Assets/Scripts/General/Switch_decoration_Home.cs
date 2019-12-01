@@ -7,16 +7,16 @@ public class Switch_decoration_Home : MonoBehaviour
 
    
     public GameObject[] TV; 
-    static public int activeIndexTV = 1;
+    static public int activeIndexTV = 0;
 
     public GameObject[] Chair;
-    static public int activeIndexChair = 1;
+    static public int activeIndexChair = 0;
 
     public GameObject[] Table;
-    static public int activeIndexTable = 1;
+    static public int activeIndexTable = 0;
 
     public GameObject[] Fridge;
-    static public int activeIndexFridge = 1;
+    static public int activeIndexFridge = 0;
 
     // Start is called before the first frame update
     void Start()

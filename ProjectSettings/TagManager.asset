@@ -11,6 +11,10 @@ TagManager:
   - TV
   - Sofa
   - Bed
+  - Kitchen
+  - Lamp
+  - Etagere
+  - Tablette
   layers:
   - Default
   - TransparentFX
