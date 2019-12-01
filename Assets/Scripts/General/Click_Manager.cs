@@ -11,6 +11,8 @@ public class Click_Manager : MonoBehaviour
     private WeekHandler week;
 
     private Text dayTextField;
+    public AudioSource porte;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class Click_Manager : MonoBehaviour
         doorExitScene = GameObject.Find("PrefabGameLogic").GetComponent<SceneHandler>();
         week = GameObject.Find("PrefabGameLogic").GetComponent<WeekHandler>();
         dayTextField = GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().dayTextField;
+
 
         // Fade Out Day
         /*if(GlobalVariable.morning == true)
@@ -52,6 +55,7 @@ public class Click_Manager : MonoBehaviour
                     }
                     if (GlobalVariable.morning == true && GlobalVariable.weekend == false){
                         //Mike put DOOR sound here;               
+                        //porte.Play();
                         GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
 
                         StartCoroutine(FadeCoroutine());
