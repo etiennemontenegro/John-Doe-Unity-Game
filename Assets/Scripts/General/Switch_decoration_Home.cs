@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+/// Ajouter comparation de qualité si 2 items de meme  familles sont acheter par le joeur.
+/// la qualitté la plus haute l'emporte
+
 public class Switch_decoration_Home : MonoBehaviour
 {
 

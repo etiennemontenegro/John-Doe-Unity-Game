@@ -143,7 +143,7 @@ public class WeekHandler : MonoBehaviour
         {
             
             walkTime -= Time.deltaTime;
-            Debug.Log(walkTime);
+            //Debug.Log(walkTime);
         
             if (walkTime < 0)
             {
