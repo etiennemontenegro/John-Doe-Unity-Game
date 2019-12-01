@@ -5,9 +5,8 @@ using UnityEngine;
 public class Switch_decoration_Home : MonoBehaviour
 {
 
-   
-    public GameObject[] TV; 
-    static public int activeIndexTV = 0;
+    public GameObject[] Fridge;
+    static public int activeIndexFridge = 0;
 
     public GameObject[] Chair;
     static public int activeIndexChair = 0;
@@ -15,8 +14,30 @@ public class Switch_decoration_Home : MonoBehaviour
     public GameObject[] Table;
     static public int activeIndexTable = 0;
 
-    public GameObject[] Fridge;
-    static public int activeIndexFridge = 0;
+    public GameObject[] TV; 
+    static public int activeIndexTV = 0;
+
+    public GameObject[] Tablette;
+    static public int activeIndexTablette = 0;
+
+    public GameObject[] Sofa;
+    static public int activeIndexSofa = 0;
+
+    public GameObject[] Bed;
+    static public int activeIndexBed = 0;
+
+    public GameObject[] TabletteTV;
+    static public int activeIndexTabletteTV = 0;
+
+    public GameObject[] Etagere;
+    static public int activeIndexEtagere = 0;
+
+    public GameObject[] Lamp;
+    static public int activeIndexLamp = 0; 
+
+    public GameObject[] Poster;
+    static public int activeIndexPoster = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +53,13 @@ public class Switch_decoration_Home : MonoBehaviour
         SwitchElementsChair(activeIndexChair);
         SwitchElementsTable(activeIndexTable);
         SwitchElementsFridge(activeIndexFridge);
+        SwitchElementsLamp(activeIndexLamp);
+        SwitchElementsSofa(activeIndexSofa);
+        SwitchElementsBed(activeIndexBed);
+        SwitchElementsPoster(activeIndexPoster);
+        SwitchElementsTablette(activeIndexTablette);
+        SwitchElementsEtagere(activeIndexEtagere);
+        SwitchElementsTabletteTV(activeIndexTabletteTV);
     }
 
     public void SwitchElementsTV(int aIndex) {
@@ -81,6 +109,103 @@ public class Switch_decoration_Home : MonoBehaviour
         {
 
             Fridge[i].SetActive(i == activeIndexFridge);
+        }
+
+    }
+
+
+
+    public void SwitchElementsLamp(int aIndex)
+    {
+
+        activeIndexLamp = aIndex;
+
+        for (int i = 0; i <= Lamp.Length - 1; i++)
+        {
+
+            Lamp[i].SetActive(i == activeIndexLamp);
+        }
+
+    }
+
+
+    public void SwitchElementsSofa(int aIndex)
+    {
+
+        activeIndexSofa = aIndex;
+
+        for (int i = 0; i <= Sofa.Length - 1; i++)
+        {
+
+            Sofa[i].SetActive(i == activeIndexSofa);
+        }
+
+    }
+
+    public void SwitchElementsBed(int aIndex)
+    {
+
+        activeIndexBed = aIndex;
+
+        for (int i = 0; i <= Bed.Length - 1; i++)
+        {
+
+            Bed[i].SetActive(i == activeIndexBed);
+        }
+
+    }
+
+    public void SwitchElementsPoster(int aIndex)
+    {
+
+        activeIndexPoster = aIndex;
+
+        for (int i = 0; i <= Poster.Length - 1; i++)
+        {
+
+            Poster[i].SetActive(i == activeIndexPoster);
+        }
+
+    }
+
+    public void SwitchElementsTablette(int aIndex)
+    {
+
+        activeIndexTablette = aIndex;
+
+        for (int i = 0; i <= Tablette.Length - 1; i++)
+        {
+
+            Tablette[i].SetActive(i == activeIndexTablette);
+        }
+
+    }
+
+
+    public void SwitchElementsEtagere(int aIndex)
+    {
+
+        activeIndexEtagere = aIndex;
+
+        for (int i = 0; i <= Etagere.Length - 1; i++)
+        {
+
+            Etagere[i].SetActive(i == activeIndexEtagere);
+        }
+
+    }
+
+
+
+    public void SwitchElementsTabletteTV(int aIndex)
+    {
+
+        activeIndexTabletteTV = aIndex;
+
+        for (int i = 0; i <= TabletteTV.Length - 1; i++)
+        {
+
+            TabletteTV[i].SetActive(i == activeIndexTabletteTV);
         }
 
     }
