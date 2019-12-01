@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Fridge
+  - Chair
+  - Table
+  - TV
+  - Sofa
+  - Bed
   layers:
   - Default
   - TransparentFX
