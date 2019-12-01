@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class StoreSolde : MonoBehaviour
 {
-    public static int solde = GlobalVariable.wallet;
+    public static int solde = 10000; // GlobalVariable.wallet;
     private int prevOrderAmount = 0;
 
     private Color red = Color.red;
@@ -21,7 +21,7 @@ public class StoreSolde : MonoBehaviour
     {
         if(prevOrderAmount != StoreCommandeAmount.orderAmount)
         {
-            solde = GlobalVariable.wallet;
+            solde = 10000; //GlobalVariable.wallet;
             solde -= StoreCommandeAmount.orderAmount;
             this.gameObject.GetComponent<Text>().text = solde.ToString();
 

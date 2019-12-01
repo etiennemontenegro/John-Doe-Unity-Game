@@ -8,13 +8,19 @@ public class StoreCommander : MonoBehaviour
     private GameObject StoreRef;
     private GameObject Store;
     private List<string> namesTabarnak;
+    public GameObject PopUpOrder;
 
     public static List<StoreItems> purchasedItems = new List<StoreItems>();
+
+    void Awake()
+    {
+        PopUpOrder = GameObject.Find("PopUpOrder");
+        Store = GameObject.Find("StoreUI");
+    }
 
     void Start()
     {
         StoreRef = GameObject.Find("StoreWindow");
-        Store = GameObject.Find("StoreUI");
         namesTabarnak = GameObject.Find("StoreWindow").GetComponent<InventoryManager>().selectedItemNames;
     }
 
@@ -33,6 +39,7 @@ public class StoreCommander : MonoBehaviour
     public void OnClick()
     {
         OrderMyShit();
+        PopUpOrder.SetActive(true);
     }
 
     void OrderMyShit()
@@ -59,9 +66,9 @@ public class StoreCommander : MonoBehaviour
 
         GlobalVariable.wallet -= StoreSolde.solde;
 
-        for(int i = 0; i < 30; i++)
+        foreach(StoreItems item in purchasedItems)
         {
-            Debug.Log(StoreRef.GetComponent<StoreSetup>().storeItems[i].purchased);
+            Debug.Log(item.itemName);
         }
     }
 }
