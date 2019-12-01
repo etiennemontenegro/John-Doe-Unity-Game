@@ -19,7 +19,7 @@ public class hittingWork : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (work.transform.position.x > 8)
+        if (work.transform.position.x > 9)
         {
 
             work.transform.Translate(-1 * moveSpeed, 0, 0);
