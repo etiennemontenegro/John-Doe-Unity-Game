@@ -93,10 +93,10 @@ public class WeekHandler : MonoBehaviour
             Debug.Log(GlobalVariable.paycheck);
             GlobalVariable.hasArrived = false;
             walkTime = _walkTime;
-            switchScene.scene2To1();
 
+            GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
+            StartCoroutine(FadeCoroutine());   
         }
-
     }
 
     void walkTimer()
@@ -108,6 +108,12 @@ public class WeekHandler : MonoBehaviour
         {
             GlobalVariable.hasArrived = true;
         }
+    }
+
+    IEnumerator FadeCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        switchScene.scene2To1();
     }
 }
 
