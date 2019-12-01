@@ -5,8 +5,13 @@ using UnityEngine;
 using TMPro;
 public class pubBehavior : MonoBehaviour
 {
-    public GameObject pub,canvas;
-    public  ItemList handler;
+    public GameObject canvas;
+    public GameObject handler;
+    public GameObject drawing;
+    private GameObject handlerChild,pub;
+
+
+    private string myObjectValue;
 
     public float moveSpeed =.05f;
     private bool HitPlayer = false;
@@ -20,12 +25,14 @@ public class pubBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
-
-        
+        pubNumber = Random.Range(0, 29);
 
 
-        TextPro.text = "Value";
+        // handler = GameObject.Find("StoreWindow");
+        //Debug.Log(handler.GetComponent<StoreSetup>().storeItems[0].price);
+        myObjectValue = handler.GetComponent<StoreSetup>().storeItems[pubNumber].price.ToString();
+        drawing.GetComponent<SpriteRenderer>().sprite = handler.GetComponent<StoreSetup>().storeItems[pubNumber].itemSprite;
+        TextPro.text = myObjectValue;
 
         canvas.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0, 1f), 1);
 
@@ -42,7 +49,7 @@ public class pubBehavior : MonoBehaviour
     
 
 
-        pubNumber = Random.Range(1,10);
+    
       ;
     }
 
