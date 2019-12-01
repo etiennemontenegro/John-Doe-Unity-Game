@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Store : MonoBehaviour
+public class StoreCommandeAmount : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
