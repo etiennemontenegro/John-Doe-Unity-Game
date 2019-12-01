@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
 
+    public WeekHandler week;
+
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class SceneHandler : MonoBehaviour
             GlobalVariable.sceneIndex = 1;
            
             SwitchScene(GlobalVariable.sceneIndex );
+            GlobalVariable.walkToWork = true;
     
     }
 
@@ -34,19 +37,23 @@ public class SceneHandler : MonoBehaviour
     {
         
        
-            GlobalVariable.sceneIndex = 2;
-            SwitchScene(GlobalVariable.sceneIndex);
+        GlobalVariable.sceneIndex = 2;
+        SwitchScene(GlobalVariable.sceneIndex);
         GlobalVariable.walkToWork = false;
         GlobalVariable.atWork = true;
-        
-    }
+        WeekHandler.walkTime = WeekHandler._walkTime;
+        Debug.Log("Reset walk timer : " + WeekHandler.walkTime);
+
+}
 
    public void scene2To1() //WORK TO TRAVEL
     {
        
             GlobalVariable.sceneIndex = 1;
             SwitchScene(GlobalVariable.sceneIndex);
-        
+        WeekHandler.workTime = WeekHandler._workTime;
+        Debug.Log("Reset work timer : " + WeekHandler.workTime);
+
     }
 
    public void scene1To0() //TRAVEL TO HOUSE
@@ -54,7 +61,12 @@ public class SceneHandler : MonoBehaviour
        
             GlobalVariable.sceneIndex = 0;
             SwitchScene(GlobalVariable.sceneIndex);
-        
+        GlobalVariable.hasArrived = false;
+        GlobalVariable.backHome = false;
+        WeekHandler.walkTime = WeekHandler._walkTime;
+        Debug.Log("Reset walk timer : " + WeekHandler.walkTime);
+
+
     }
 
     void SwitchScene( int load )

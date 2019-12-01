@@ -8,7 +8,7 @@ public class Click_Manager : MonoBehaviour
 {
     
     private SceneHandler doorExitScene;
-
+    public WeekHandler week;
 
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class Click_Manager : MonoBehaviour
 
                 if (hit.transform.tag == "Door")
                 {
-                   
+                
 
 
                     if (GlobalVariable.morning != true)
@@ -142,8 +142,9 @@ public class Click_Manager : MonoBehaviour
                 if (hit.transform.tag == "Bed" && GlobalVariable.morning != true) {
                     Debug.Log("Jai hit le lit");
                     GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
-                    StartCoroutine(FadeCoroutine());
-                    GlobalVariable.day++;
+                    //StartCoroutine(FadeCoroutine());
+                    //GlobalVariable.day++;
+                    week.DayIsOver();
                     GlobalVariable.morning = true;
                 }
             }
