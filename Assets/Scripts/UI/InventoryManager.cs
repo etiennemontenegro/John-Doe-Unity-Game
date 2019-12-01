@@ -16,7 +16,10 @@ public class InventoryManager : MonoBehaviour
 
     public static int totalPrice = 0;
 
+    public static bool closeShits = false;
+
     private GameObject StoreRef;
+    public StoreItems[] itemsAgain;
 
     [SerializeField]
     public Sprite[] objectAssets;
@@ -43,6 +46,11 @@ public class InventoryManager : MonoBehaviour
 
         GenerateStoreInventory();
 
+    }
+
+    void Start()
+    {
+        itemsAgain = StoreRef.GetComponent<StoreSetup>().storeItems;
     }
 
     void Update()
@@ -74,6 +82,12 @@ public class InventoryManager : MonoBehaviour
                     totalPrice -= myPrice;
                 }
             }
+        }
+
+        if(closeShits)
+        {
+            CloseStore();
+            closeShits = false;
         }
     }
 
@@ -114,6 +128,17 @@ public class InventoryManager : MonoBehaviour
 
         storeAllItems.Clear();
         storeDisplayItems.Clear();
+    }
+
+    void CloseStore()
+    {
+        StoreInventory.storeCopyDone = false;
+        for(int i = 0; i < 30; i++)
+        {
+            StoreInventory.CopyStoreInventory(itemsAgain[i]);
+        }
+        StoreInventory.storeCopyDone = true;
+        GameObject.Find("StoreUI").SetActive(false);
     }
 }
 

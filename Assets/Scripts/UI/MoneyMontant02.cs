@@ -7,7 +7,7 @@ public class MoneyMontant02 : MonoBehaviour
 {
     Text txt02;
 
-    void Start()
+    void Update()
     {
         txt02 = gameObject.GetComponent<Text>();
         txt02.text = "Appart trop cher: -" + MoneyManagment.montant2;

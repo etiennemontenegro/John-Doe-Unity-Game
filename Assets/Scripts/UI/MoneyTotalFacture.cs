@@ -7,7 +7,7 @@ public class MoneyTotalFacture : MonoBehaviour
 {
     Text txtTotal;
 
-    void Start()
+    void Update()
     {
         txtTotal = gameObject.GetComponent<Text>();
         txtTotal.text = "Gros total : " + MoneyManagment.total;

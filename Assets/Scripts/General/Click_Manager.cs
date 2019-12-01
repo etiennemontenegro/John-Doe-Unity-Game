@@ -156,7 +156,7 @@ public class Click_Manager : MonoBehaviour
 
                     //GlobalVariable.day++;
                     week.DayIsOver();
-                    GlobalVariable.morning = true;
+                    //GlobalVariable.morning = true;
 
                     // Show Day
                     StartCoroutine(GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
