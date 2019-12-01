@@ -76,6 +76,7 @@ public class WeekHandler : MonoBehaviour
             GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck;
             money.RandomDeduction((float)GlobalVariable.paycheck);
             //ENVOYER LES DONNÉES A CATHRINE
+            //afficher son UI
             GlobalVariable.paycheck = 0;
 
         }
