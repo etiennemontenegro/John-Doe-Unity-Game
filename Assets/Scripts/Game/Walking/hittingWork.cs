@@ -37,7 +37,8 @@ public class hittingWork : MonoBehaviour
     void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
-        {                  
+        {      
+            //------------------------------------------------------------------------------------------ SOUND ENTERING WORK
             GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
             StartCoroutine(FadeCoroutine());
         }   

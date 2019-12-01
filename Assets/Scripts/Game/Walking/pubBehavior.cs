@@ -76,7 +76,7 @@ public class pubBehavior : MonoBehaviour
         {
                 HitPlayer = true;
                 Debug.Log(pubNumber);
-                 //PlaySound of pub here 
+                 //----------------------------------------PlaySound of pub here 
         }
 
 
