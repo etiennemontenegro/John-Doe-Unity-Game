@@ -7,7 +7,7 @@ public class MoneyMontant03 : MonoBehaviour
 {
     Text txt03;
 
-    void Start()
+    void Update()
     {
         txt03 = gameObject.GetComponent<Text>();
         txt03.text = "Netflikse: -" + MoneyManagment.montant3;
