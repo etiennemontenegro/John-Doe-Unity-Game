@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorkInteraction : MonoBehaviour
 {
 
-    int count = 0;
+  public static int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +21,12 @@ public class WorkInteraction : MonoBehaviour
     void OnMouseDown()
     {
         count++;
-        Debug.Log(count);
+        //Debug.Log(count);
     }
 
   public void UpdatePaycheck()
     {
+        
         GlobalVariable.paycheck = GlobalVariable.paycheck + count;
         count = 0;
 

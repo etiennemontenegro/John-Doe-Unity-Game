@@ -5,6 +5,7 @@ using UnityEngine;
 public class hittingHome : MonoBehaviour
 {
    private GameObject home,player;
+    public SceneHandler changingScene;
     private float moveSpeed = .05f;
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,15 @@ public class hittingHome : MonoBehaviour
             player.transform.position = new Vector3(player.transform.position.x - .05f, player.transform.position.y, player.transform.position.z);
         }
     }
+    void OnTriggerStay(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("test");
+            changingScene.scene1To0();
+        }
 
+
+
+    }
 }

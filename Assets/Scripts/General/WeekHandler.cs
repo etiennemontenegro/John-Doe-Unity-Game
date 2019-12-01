@@ -5,11 +5,8 @@ using UnityEngine;
 public class WeekHandler : MonoBehaviour
 {
 
-    public SceneHandler switchScene;
-    public WorkInteraction interaction;
-
     float weekendTime = 120;
-    float workTime = 20;
+    float workTime = 90;
     float walkTime = 20;
 
     // Start is called before the first frame update
@@ -21,15 +18,15 @@ public class WeekHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(walkTime);
      if( GlobalVariable.walkToWork )
         {
             walkTimer();
         }
-        
-      
-     if( GlobalVariable.atWork)
+
+        if (GlobalVariable.backHome)
         {
-            WorkTimer();
+            walkTimer();
         }
 
 
@@ -78,14 +75,10 @@ public class WeekHandler : MonoBehaviour
     void WorkTimer()
     {
         workTime -= Time.deltaTime;
-        
+
         if (workTime < 0)
         {
-            GlobalVariable.atWork = false;
             GlobalVariable.morning = false;
-            GlobalVariable.backHome = true;
-            interaction.UpdatePaycheck();
-            switchScene.scene2To1();
         }
 
     }

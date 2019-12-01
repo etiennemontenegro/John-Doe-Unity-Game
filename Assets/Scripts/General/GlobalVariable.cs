@@ -13,7 +13,7 @@ public class GlobalVariable : MonoBehaviour
     public static int sceneIndex = 0; // 0= house 1=travel 2= work 
     
     public static int day = 0;
-    public static bool morning = true;
+    public static bool morning = false;
     public static bool weekend = false;
     public static bool menu = true;
     public static bool goToWork = false;
@@ -29,7 +29,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool hasArrived = false;
     public static bool atWork = false;
     public static bool workIsDone = false;
-    public static int paycheck = 0; //salaire verser a chaque semaine
+    public static int paycheck ; //salaire verser a chaque semaine
 
     //TRAVELLING////////////////////////////////////////////////
 

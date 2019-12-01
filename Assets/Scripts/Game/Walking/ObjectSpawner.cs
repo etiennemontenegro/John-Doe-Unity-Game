@@ -20,8 +20,8 @@ public class ObjectSpawner : MonoBehaviour
     void Update()
     {
 
-     if(GlobalVariable.morning) hasArrived = GlobalVariable.hasArrived;
-      if (!GlobalVariable.morning) hasArrived = GlobalVariable.backHome;
+      hasArrived = GlobalVariable.hasArrived;
+    
 
 
 
