@@ -10,21 +10,26 @@ public class Click_Manager : MonoBehaviour
     private SceneHandler doorExitScene;
     private WeekHandler week;
 
+    private Text dayTextField;
 
     // Start is called before the first frame update
     void Start()
     {
-
         doorExitScene = GameObject.Find("PrefabGameLogic").GetComponent<SceneHandler>();
         week = GameObject.Find("PrefabGameLogic").GetComponent<WeekHandler>();
+        dayTextField = GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().dayTextField;
+
+        // Fade Out Day
+        /*if(GlobalVariable.morning == true)
+        {
+            StartCoroutine(GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().FadeTextToZeroAlpha(1f, dayTextField.GetComponent<Text>()));
+        }       */
     }
 
     // Update is called once per frame
     void Update()
     {
         DetectElement();
-
-
     }
 
     public void DetectElement() {
@@ -142,11 +147,16 @@ public class Click_Manager : MonoBehaviour
 
                 if (hit.transform.tag == "Bed" && GlobalVariable.morning != true) {
                     Debug.Log("Jai hit le lit");
-                    GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
-                    //StartCoroutine(FadeCoroutine());
+                    // Start Fade without changing scene
+                    GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);   
+
                     //GlobalVariable.day++;
                     week.DayIsOver();
                     GlobalVariable.morning = true;
+
+                    // Show Day
+                    StartCoroutine(GameObject.Find("PrefabGameLogic").GetComponent<WeekTextHandler>().FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
+                    //print("DAY WAS UPDATED");
                 }
             }
 
