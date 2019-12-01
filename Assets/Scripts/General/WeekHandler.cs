@@ -58,6 +58,7 @@ public class WeekHandler : MonoBehaviour
         {
             
             GlobalVariable.weekend = true;
+
             Debug.Log("ITS THE WEEKEND");
         }
         
@@ -66,6 +67,8 @@ public class WeekHandler : MonoBehaviour
    public void DayIsOver()
     {
         GlobalVariable.day++;
+
+
         
         if (GlobalVariable.day > 6)
         {

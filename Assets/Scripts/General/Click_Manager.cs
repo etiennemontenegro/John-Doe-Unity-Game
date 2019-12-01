@@ -8,7 +8,7 @@ public class Click_Manager : MonoBehaviour
 {
     
     private SceneHandler doorExitScene;
-    public WeekHandler week;
+    private WeekHandler week;
 
 
     // Start is called before the first frame update
@@ -16,6 +16,7 @@ public class Click_Manager : MonoBehaviour
     {
 
         doorExitScene = GameObject.Find("PrefabGameLogic").GetComponent<SceneHandler>();
+        week = GameObject.Find("PrefabGameLogic").GetComponent<WeekHandler>();
     }
 
     // Update is called once per frame
@@ -44,7 +45,7 @@ public class Click_Manager : MonoBehaviour
                     {
                         //Mike put ERROR sound here;                
                     }
-                    if (GlobalVariable.morning == true && GlobalVariable.weekend != false){
+                    if (GlobalVariable.morning == true && GlobalVariable.weekend == false){
                         //Mike put DOOR sound here;               
                         GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
 

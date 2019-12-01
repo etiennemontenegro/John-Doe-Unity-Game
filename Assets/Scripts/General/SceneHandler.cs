@@ -15,7 +15,7 @@ public class SceneHandler : MonoBehaviour
 
     void Start()
     {
-        dayTextField.text = dayNames[GlobalVariable.day];
+       // dayTextField.text = dayNames[GlobalVariable.day];
     }
 
     // Update is called once per frame
