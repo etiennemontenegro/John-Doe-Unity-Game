@@ -73,10 +73,14 @@ public class WeekHandler : MonoBehaviour
         
         if(GlobalVariable.day == 5 )
         {
-            GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck;
+            
             money.RandomDeduction((float)GlobalVariable.paycheck);
+           
+
             //ENVOYER LES DONNÉES A CATHRINE
             //afficher son UI
+            GameObject.Find("UIFactureWeekend").SetActive(true);
+            GlobalVariable.wallet = GlobalVariable.wallet + GlobalVariable.paycheck - MoneyManagment.total;
             GlobalVariable.paycheck = 0;
 
         }
