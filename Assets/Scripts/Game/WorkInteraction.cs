@@ -7,6 +7,7 @@ public class WorkInteraction : MonoBehaviour
 
   public static int count = 0;
     private float typeCycle = 0;
+    public AudioSource[] randomType;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +23,8 @@ public class WorkInteraction : MonoBehaviour
     void OnMouseDown()
     {
         count++;
-
-        if(typeCycle < 11)
+        randomType[Random.Range(0, randomType.Length)].Play();
+        if (typeCycle < 11)
         {
             typeCycle++;
         } 
