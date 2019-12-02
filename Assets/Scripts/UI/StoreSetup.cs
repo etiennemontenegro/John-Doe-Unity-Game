@@ -38,10 +38,18 @@ public class StoreSetup : MonoBehaviour
                 storeItems[i].itemSprite = itemSprites[i];
                 storeItems[i].price = itemData.itemList[i].itemPrice;
                 storeItems[i].quality = itemData.itemList[i].itemQuality;
-                storeItems[i].purchased = false;
+                
+                
+               // if(!GlobalVariable.hasStarted) storeItems[i].purchased = false;
+
+
+                
             }
             
         }
+        GlobalVariable.hasStarted = true;
+        GlobalVariable.storeItems = storeItems;
+
         setupHasRan = true;
     }
 }
@@ -66,5 +74,5 @@ public class StoreItems
     public Sprite itemSprite;
     public int price = 0;
     public int quality = 0;
-    public bool purchased = false;
+    public bool purchased = true;
 }

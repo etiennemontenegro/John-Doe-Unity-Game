@@ -20,6 +20,11 @@ public class GlobalVariable : MonoBehaviour
     public static bool menuWasSeen = false; //si le menu a été vu
     public static bool onlyOneTime = false;
 
+
+    public static bool hasStarted = false;
+
+    public static StoreItems[] storeItems = new StoreItems[30];
+
     //HOUSE/////////////////////////////////////////////////////////
 
     public static bool _IsTooTired = false;

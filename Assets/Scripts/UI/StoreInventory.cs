@@ -21,8 +21,9 @@ public class StoreInventory : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(newStore.GetComponent<StoreSetup>().storeItems[0].purchased);
         Store = GameObject.Find("StoreUI");
-        //newStore = GameObject.Find("StoreWindow");
+        newStore = GameObject.Find("StoreWindow");
         MessageOne = GameObject.Find("PopUpYouSuck");
         MessageTwo = GameObject.Find("PopUpOrder");
 
@@ -36,26 +37,18 @@ public class StoreInventory : MonoBehaviour
         for (int i = 0; i <= 29; i++)
         {
 
-            PurchasesItemIndex = newStore.GetComponent<StoreSetup>().storeItems[i].purchased;
-
-            if (PurchasesItemIndex = newStore.GetComponent<StoreSetup>().storeItems[i].purchased == false)
+            if (i == 0 && newStore.GetComponent<StoreSetup>().storeItems[i].purchased)
             {
-                break;
+                TV.GetComponent<SpriteRenderer>().sprite = newStore.GetComponent<StoreSetup>().storeItems[0].itemSprite;
             }
-            else {
 
-                if (i == 0) {
-                    TV.GetComponent<SpriteRenderer>().sprite = newStore.GetComponent<StoreSetup>().storeItems[0].itemSprite;
-                }
-            
-            }
         }
 
     }
 
     private void Update()
     {
-
+        Debug.Log(GlobalVariable.storeItems[0].purchased);
         /* ============================
          ========= TV =================
          =========================== */
