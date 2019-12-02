@@ -36,7 +36,7 @@ public class StoreInventory : MonoBehaviour
         Store.SetActive(false);
 
        //TV.GetComponent<SpriteRenderer>().sprite = newStore.GetComponent<StoreSetup>().storeItems[0].itemSprite;
-       if(GlobalVariable.startGame)
+       if(GlobalVariable.jeuEnMarche)
         {
             for (int i = 0; i <= 29; i++)
             {

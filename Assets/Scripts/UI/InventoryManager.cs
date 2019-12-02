@@ -33,8 +33,11 @@ public class InventoryManager : MonoBehaviour
 
         StoreRef = GameObject.Find("StoreWindow");
 
-        if(GlobalVariable.startGame)
+        Debug.Log("Start Game : " + GlobalVariable.jeuEnMarche);
+
+        if(GlobalVariable.jeuEnMarche)
         {
+            Debug.Log("Je passe ici, je fais mes shit");
             for (int i = 0; i < 30; i++)
             {
                 StoreItemBox newItem = new StoreItemBox();

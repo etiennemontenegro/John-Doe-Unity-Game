@@ -5,19 +5,15 @@ using UnityEngine.UI;
 
 public class StoreSolde : MonoBehaviour
 {
-    public static int solde = GlobalVariable.wallet;
+    public static int solde;
     private int prevOrderAmount = 0;
 
     private Color red = Color.red;
     private Color grey = new Color(0.5f, 0.5f, 0.5f);
 
-    void Start()
-    {
-        this.gameObject.GetComponent<Text>().text = solde.ToString();
-    }
-
     void OnEnable()
     {
+        solde = GlobalVariable.wallet;
         this.gameObject.GetComponent<Text>().text = GlobalVariable.wallet.ToString();
     }
 

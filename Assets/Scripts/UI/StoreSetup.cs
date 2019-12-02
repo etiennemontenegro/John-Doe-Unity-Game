@@ -24,7 +24,7 @@ public class StoreSetup : MonoBehaviour
 
     void Awake()
     {
-        if (!GlobalVariable.setupDone && GlobalVariable.startGame)
+        if (!GlobalVariable.setupDone && GlobalVariable.jeuEnMarche)
         {
             jsonPath = Application.streamingAssetsPath + "/itemList.json";
             jsonString = File.ReadAllText(jsonPath);

@@ -45,6 +45,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool inStore = false;
     public static bool setupDone = false;
     public static StoreItems[] storeItems = new StoreItems[30];
+    public static bool jeuEnMarche = false;
 
     // Start is called before the first frame update
     void Start()
