@@ -8,6 +8,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject SpawnedObject;
     int check = 0;
     public AudioSource[] pubRandom;
+    public AudioSource[] finDeShift;
 
 
     static public int amountPubs;
@@ -51,6 +52,11 @@ public class ObjectSpawner : MonoBehaviour
                 Instantiate(Home);
                 Destroy(this);
                 return;
+            }
+
+            if (playerHandler.isNight)
+            {
+                finDeShift[Random.Range(0, finDeShift.Length)].Play();
             }
            
             Instantiate(SpawnedObject);
