@@ -12,7 +12,8 @@ public class Click_Manager : MonoBehaviour
 
     private Text dayTextField;
     public AudioSource porte;
-    
+    public AudioSource jeSuisFatigué;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +52,12 @@ public class Click_Manager : MonoBehaviour
 
                     if (GlobalVariable.morning != true)
                     {
-                        //Mike put ERROR sound here;                
+                        //Mike put ERROR sound here;
+                        jeSuisFatigué.Play();
                     }
                     if (GlobalVariable.morning == true && GlobalVariable.weekend == false){
                         //Mike put DOOR sound here;               
-                        //porte.Play();
+                        porte.Play();
                         GameObject.Find("PrefabGameLogic").GetComponent<Animator>().SetBool("PlayFade", true);
 
                         StartCoroutine(FadeCoroutine());
