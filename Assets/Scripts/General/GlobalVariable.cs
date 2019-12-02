@@ -12,7 +12,7 @@ public class GlobalVariable : MonoBehaviour
 
     public static int sceneIndex = 0; // 0= house 1=travel 2= work 
     
-    public static int day = 0;
+    public static int day = 4;
     public static bool morning = true;
     public static bool weekend = false;
     public static bool menu = true;
@@ -20,6 +20,8 @@ public class GlobalVariable : MonoBehaviour
     public static int wallet = 0; //argent dans ton compte
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
+    public static bool menuWasSeen = false; //si le menu a été vu
+    public static bool onlyOneTime = false;
 
     //HOUSE/////////////////////////////////////////////////////////
 
