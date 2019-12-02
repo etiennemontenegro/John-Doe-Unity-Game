@@ -11,7 +11,7 @@ public class WeekHandler : MonoBehaviour
     public WorkInteraction interaction;
     public MoneyManagment money;
     public static float _walkTime = 5;
-    public static float _weekendTime = 12;
+    public static float _weekendTime = 120;
     public static float _workTime = 5;
 
 

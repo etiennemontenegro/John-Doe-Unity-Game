@@ -17,6 +17,11 @@ TagManager:
   - Tablette
   - Poster
   - Facture
+  - Plant
+  - Floor
+  - Trophy
+  - Wallpaper
+  - plaquette
   layers:
   - Default
   - TransparentFX

@@ -5,9 +5,6 @@ using UnityEngine;
 public class GlobalVariable : MonoBehaviour
 {
 
-
-
-
     //GENERAL//////////////////////////////////////////////////////
 
     public static int sceneIndex = 0; // 0= house 1=travel 2= work 
@@ -17,7 +14,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool weekend = false;
     public static bool menu = true;
     public static bool goToWork = false;
-    public static int wallet = 0; //argent dans ton compte
+    public static int wallet = 100000000; //argent dans ton compte
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
     public static bool menuWasSeen = false; //si le menu a été vu
@@ -35,8 +32,8 @@ public class GlobalVariable : MonoBehaviour
 
     //TRAVELLING////////////////////////////////////////////////
 
-       public static bool walkToWork = false;
-       public static bool backHome = false;
+    public static bool walkToWork = false;
+    public static bool backHome = false;
 
     //STORE////////////////////////////////////////////////////
 

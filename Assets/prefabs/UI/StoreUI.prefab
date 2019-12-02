@@ -1436,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2977a684de3b8db469c551d38cb1ad67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinTimer: {fileID: 0}
 --- !u!1 &3983024435782294578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +2831,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2766d2cfc667668498d9442bc0e08436, type: 3}
   - {fileID: 21300000, guid: 8e8e12bc9330f5f42b768b9bc6d17462, type: 3}
   - {fileID: 21300000, guid: c932822fb9957c24c8a52292c7bb68d7, type: 3}
-  - {fileID: 21300000, guid: 3f6fd6c97fad7214c93378faf6b59452, type: 3}
+  - {fileID: 21300000, guid: 642758007239fae438f3eff836b18732, type: 3}
   - {fileID: 21300000, guid: 9381981c1c4b6aa479802550d54f535e, type: 3}
   - {fileID: 21300000, guid: 916a4f84209cff341884c33b49dc7cee, type: 3}
   - {fileID: 21300000, guid: daeae1db997265d4fb31f2e28c6138cf, type: 3}
@@ -3455,16 +3456,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3183933819984091627}
     m_Modifications:
-    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
-        type: 3}
-      propertyPath: m_Name
-      value: PopUpYouSuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4456350121114283136, guid: a833f3b7e6c015e4fa00609eda315639,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3569,6 +3560,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
+        type: 3}
+      propertyPath: m_Name
+      value: PopUpYouSuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4456350122675885325, guid: a833f3b7e6c015e4fa00609eda315639,
         type: 3}
