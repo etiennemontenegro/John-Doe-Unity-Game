@@ -161,7 +161,10 @@ public class WeekHandler : MonoBehaviour
 
         if (weekendTime < 0)
         {
-            GlobalVariable.weekend = false;    
+            GlobalVariable.weekend = false;
+
+            
+
         }
     }
 
