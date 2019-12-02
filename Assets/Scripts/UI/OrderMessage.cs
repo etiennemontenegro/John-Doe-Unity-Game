@@ -8,5 +8,7 @@ public class OrderMessage : MonoBehaviour
     {
         InventoryManager.closeShits = true;
         this.gameObject.SetActive(false);
+        GlobalVariable.inStore = false;
+        GlobalVariable.morning = false;
     }
 }
