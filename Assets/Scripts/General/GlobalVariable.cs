@@ -21,6 +21,7 @@ public class GlobalVariable : MonoBehaviour
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
     public static bool menuWasSeen = false; //si le menu a été vu
+    public static bool onlyOneTime = false;
 
     //HOUSE/////////////////////////////////////////////////////////
 

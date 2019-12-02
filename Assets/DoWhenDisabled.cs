@@ -6,8 +6,7 @@ public class DoWhenDisabled : MonoBehaviour
 {
     void OnDisable()
     {
-        Debug.Log("PrintOnDisable: script was disabled");
-        GameObject.Find("MenuUI").GetComponent<CheckMenuActive>().menuIsActive = false;
-        GlobalVariable.menuWasSeen = true;
+        Debug.Log("PrintOnDisable: script was disabled");        
+        GlobalVariable.menuWasSeen = true; 
     }   
 }
