@@ -21,11 +21,23 @@ public class WeekHandler : MonoBehaviour
 
     //GameObject UIfactureParent;
     private GameObject UIfacture;
+    public GameObject bouttonStore;
     // Start is called before the first frame update
+
+    void Awake()
+    {
+        bouttonStore = GameObject.Find("ButtonAmazing");
+    }
+
+    
+
     void Start()
     {
 
         UIfacture = GameObject.Find("BackgroundBlack");
+
+        bouttonStore.GetComponent<Button>().interactable = false ;
+
        // UIfacture.transform.position = new Vector3(0, -1000, 0);
         //UIfacture = UIfactureParent.transform.Find("UIFactureWeekend").gameObject;
 
@@ -42,6 +54,10 @@ public class WeekHandler : MonoBehaviour
     void Update()
     {
         //Debug.Log(GlobalVariable.walkToWork);
+
+
+
+   
 
         if (GlobalVariable.walkToWork)
         {
@@ -84,6 +100,21 @@ public class WeekHandler : MonoBehaviour
 
         Debug.Log("Day :" + GlobalVariable.day);
         Debug.Log("morning :" + GlobalVariable.morning);
+
+
+        if (GlobalVariable.day == 5 && GlobalVariable.sceneIndex == 0)
+        {
+            bouttonStore = GameObject.Find("ButtonAmazing");
+            bouttonStore.GetComponent<Button>().interactable = true;
+
+
+        }
+        else
+        {
+            bouttonStore = GameObject.Find("ButtonAmazing");
+            bouttonStore.GetComponent<Button>().interactable = false;
+        }
+
 
         if (GlobalVariable.day == 5 && GlobalVariable.morning)
         {
