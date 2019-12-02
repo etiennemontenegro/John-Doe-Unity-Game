@@ -65,10 +65,5 @@ public class StoreCommander : MonoBehaviour
         }
 
         GlobalVariable.wallet -= StoreSolde.solde;
-
-        foreach(StoreItems item in purchasedItems)
-        {
-            Debug.Log(item.itemName);
-        }
     }
 }
