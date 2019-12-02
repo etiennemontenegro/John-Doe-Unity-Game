@@ -8,5 +8,6 @@ public class DoWhenDisabled : MonoBehaviour
     {
         Debug.Log("PrintOnDisable: script was disabled");
         GameObject.Find("MenuUI").GetComponent<CheckMenuActive>().menuIsActive = false;
+        GlobalVariable.menuWasSeen = true;
     }   
 }

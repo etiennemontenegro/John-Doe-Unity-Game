@@ -20,6 +20,7 @@ public class GlobalVariable : MonoBehaviour
     public static int wallet = 0; //argent dans ton compte
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
+    public static bool menuWasSeen = false; //si le menu a été vu
 
     //HOUSE/////////////////////////////////////////////////////////
 
