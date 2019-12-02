@@ -16,7 +16,12 @@ public class StoreSolde : MonoBehaviour
         this.gameObject.GetComponent<Text>().text = solde.ToString();
     }
 
-    
+    void OnEnable()
+    {
+        this.gameObject.GetComponent<Text>().text = GlobalVariable.wallet.ToString();
+    }
+
+
     void Update()
     {
         if(prevOrderAmount != StoreCommandeAmount.orderAmount)

@@ -52,9 +52,9 @@ public class StoreCommander : MonoBehaviour
         {
             for(int i =0; i < 30; i++)
             {
-                if(StoreRef.GetComponent<StoreSetup>().storeItems[i].itemName == orderedItems)
+                if (GlobalVariable.storeItems[i].itemName == orderedItems)
                 {
-                    purchasedItems.Add(StoreRef.GetComponent<StoreSetup>().storeItems[i]);
+                    purchasedItems.Add(GlobalVariable.storeItems[i]);
                 }
             }
         }

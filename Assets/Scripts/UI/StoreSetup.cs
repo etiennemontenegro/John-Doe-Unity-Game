@@ -6,13 +6,15 @@ using UnityEngine;
 
 public class StoreSetup : MonoBehaviour
 {
-    bool setupHasRan = false;
+    //bool setupHasRan = false;
 
     [SerializeField]
     public StoreItems[] storeItems = new StoreItems[30];
 
     string jsonString;
     string jsonPath;
+
+    
 
     [SerializeField]
     public Sprite[] itemSprites;
@@ -22,35 +24,30 @@ public class StoreSetup : MonoBehaviour
 
     void Awake()
     {
-        if (!setupHasRan)
+        if (!GlobalVariable.setupDone && GlobalVariable.startGame)
         {
             jsonPath = Application.streamingAssetsPath + "/itemList.json";
             jsonString = File.ReadAllText(jsonPath);
 
             itemData = JsonUtility.FromJson<ItemList>(jsonString);
-        }
 
-        if (!setupHasRan)
-        {
             for (int i = 0; i < 30; i++)
             {
                 storeItems[i].itemName = ItemNameList.GeneralitemNames[i];
                 storeItems[i].itemSprite = itemSprites[i];
                 storeItems[i].price = itemData.itemList[i].itemPrice;
                 storeItems[i].quality = itemData.itemList[i].itemQuality;
-                
-                
-               // if(!GlobalVariable.hasStarted) storeItems[i].purchased = false;
-
-
-                
             }
-            
+            GlobalVariable.storeItems = storeItems;
+            GlobalVariable.setupDone = true;
         }
-        GlobalVariable.hasStarted = true;
-        GlobalVariable.storeItems = storeItems;
 
-        setupHasRan = true;
+        //GlobalVariable.hasStarted = true;
+        //GlobalVariable.storeItems = storeItems;
+        for (int i = 0; i < 30; i++)
+        {
+            Debug.Log("Dans la liste : " + storeItems[i].itemName);
+        }
     }
 }
 
@@ -71,8 +68,8 @@ public class ItemData
 public class StoreItems
 {
     public string itemName = "Fuck You";
-    public Sprite itemSprite;
+    public Sprite itemSprite = null;
     public int price = 0;
     public int quality = 0;
-    public bool purchased = true;
+    public bool purchased = false;
 }

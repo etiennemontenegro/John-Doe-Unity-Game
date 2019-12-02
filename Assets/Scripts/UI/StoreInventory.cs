@@ -17,15 +17,18 @@ public class StoreInventory : MonoBehaviour
     //public Sprite newSpriteElement;
 
 
-
-
-    void Start()
+    void Awake()
     {
-        Debug.Log(newStore.GetComponent<StoreSetup>().storeItems[0].purchased);
         Store = GameObject.Find("StoreUI");
         newStore = GameObject.Find("StoreWindow");
         MessageOne = GameObject.Find("PopUpYouSuck");
         MessageTwo = GameObject.Find("PopUpOrder");
+    }
+
+    void Start()
+    {
+        //Debug.Log(newStore.GetComponent<StoreSetup>().storeItems[0].purchased);
+        
 
 
         MessageTwo.SetActive(false);
@@ -33,22 +36,23 @@ public class StoreInventory : MonoBehaviour
         Store.SetActive(false);
 
        //TV.GetComponent<SpriteRenderer>().sprite = newStore.GetComponent<StoreSetup>().storeItems[0].itemSprite;
-
-        for (int i = 0; i <= 29; i++)
+       if(GlobalVariable.startGame)
         {
-
-            if (i == 0 && newStore.GetComponent<StoreSetup>().storeItems[i].purchased)
+            for (int i = 0; i <= 29; i++)
             {
-                TV.GetComponent<SpriteRenderer>().sprite = newStore.GetComponent<StoreSetup>().storeItems[0].itemSprite;
+
+                if (i == 0 && GlobalVariable.storeItems[i].purchased)
+                {
+                    TV.GetComponent<SpriteRenderer>().sprite = GlobalVariable.storeItems[0].itemSprite;
+                }
+
             }
-
         }
-
     }
 
     private void Update()
     {
-        Debug.Log(GlobalVariable.storeItems[0].purchased);
+        //Debug.Log(GlobalVariable.storeItems[0].purchased);
         /* ============================
          ========= TV =================
          =========================== */

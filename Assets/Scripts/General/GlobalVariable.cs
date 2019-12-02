@@ -14,7 +14,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool weekend = false;
     public static bool menu = true;
     public static bool goToWork = false;
-    public static int wallet = 100000000; //argent dans ton compte
+    public static int wallet = 10000; //argent dans ton compte
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
     public static bool menuWasSeen = false; //si le menu a été vu
@@ -23,7 +23,7 @@ public class GlobalVariable : MonoBehaviour
 
     public static bool hasStarted = false;
 
-    public static StoreItems[] storeItems = new StoreItems[30];
+    
 
     //HOUSE/////////////////////////////////////////////////////////
 
@@ -42,9 +42,9 @@ public class GlobalVariable : MonoBehaviour
 
     //STORE////////////////////////////////////////////////////
 
-    public static bool inStore = false; 
-
-
+    public static bool inStore = false;
+    public static bool setupDone = false;
+    public static StoreItems[] storeItems = new StoreItems[30];
 
     // Start is called before the first frame update
     void Start()

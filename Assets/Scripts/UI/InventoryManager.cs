@@ -33,24 +33,26 @@ public class InventoryManager : MonoBehaviour
 
         StoreRef = GameObject.Find("StoreWindow");
 
-        for (int i = 0; i < 30; i++)
+        if(GlobalVariable.startGame)
         {
-            StoreItemBox newItem = new StoreItemBox();
+            for (int i = 0; i < 30; i++)
+            {
+                StoreItemBox newItem = new StoreItemBox();
 
-            storeDisplayItems.Add(newItem);
-            storeDisplayItems[i].itemSprite = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemSprite;
-            storeDisplayItems[i].itemName = StoreRef.GetComponent<StoreSetup>().storeItems[i].itemName;
-            storeDisplayItems[i].itemPrice = StoreRef.GetComponent<StoreSetup>().storeItems[i].price;
-            storeDisplayItems[i].purchased = StoreRef.GetComponent<StoreSetup>().storeItems[i].purchased;
+                storeDisplayItems.Add(newItem);
+                storeDisplayItems[i].itemSprite = GlobalVariable.storeItems[i].itemSprite;
+                storeDisplayItems[i].itemName = GlobalVariable.storeItems[i].itemName;
+                storeDisplayItems[i].itemPrice = GlobalVariable.storeItems[i].price;
+                storeDisplayItems[i].purchased = GlobalVariable.storeItems[i].purchased;
+            }
+
+            GenerateStoreInventory();
         }
-
-        GenerateStoreInventory();
-
     }
 
     void Start()
     {
-        itemsAgain = StoreRef.GetComponent<StoreSetup>().storeItems;
+        itemsAgain = GlobalVariable.storeItems;
     }
 
     void Update()
