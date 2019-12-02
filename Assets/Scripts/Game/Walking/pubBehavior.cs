@@ -11,7 +11,7 @@ public class pubBehavior : MonoBehaviour
     private GameObject handlerChild,pub;
 
 
-    private string myObjectValue;
+    private string myObjectValue,myObjectName;
 
     public float moveSpeed =.05f;
     private bool HitPlayer = false;
@@ -19,7 +19,7 @@ public class pubBehavior : MonoBehaviour
     public bool hasSpawned = false;
     public bool HasClicked = true;
     public int pubNumber,maxDist = 20;
-    public TextMeshProUGUI TextPro;
+    public TextMeshProUGUI TextPro,TextPro2;
  
 
     // Start is called before the first frame update
@@ -30,9 +30,16 @@ public class pubBehavior : MonoBehaviour
 
         // handler = GameObject.Find("StoreWindow");
         //Debug.Log(handler.GetComponent<StoreSetup>().storeItems[0].price);
-        myObjectValue = handler.GetComponent<StoreSetup>().storeItems[pubNumber].price.ToString() + "$ wow!";
+        myObjectValue = handler.GetComponent<StoreSetup>().storeItems[pubNumber].price.ToString() + "$!";
+        myObjectName = handler.GetComponent<StoreSetup>().storeItems[pubNumber].itemName.ToString();
         drawing.GetComponent<SpriteRenderer>().sprite = handler.GetComponent<StoreSetup>().storeItems[pubNumber].itemSprite;
         TextPro.text = myObjectValue;
+
+
+        myObjectName = myObjectName.Split(new char[] { ' ' })[0];
+        TextPro2.text = myObjectName;
+
+      
 
         canvas.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0, 1f), 1);
 
