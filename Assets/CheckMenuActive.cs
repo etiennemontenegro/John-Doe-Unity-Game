@@ -20,8 +20,14 @@ public class CheckMenuActive : MonoBehaviour
     {
         if(menuIsActive == false)
         {
+            GlobalVariable.menuWasSeen = false;
             StartCoroutine(FadeIntro());
         }         
+
+        if(GlobalVariable.menuWasSeen == false)
+        {
+            //GameObject.Find("CanvasUIMenu").SetActive(false);
+        }
     }
 
     IEnumerator FadeIntro()
