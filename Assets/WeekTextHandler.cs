@@ -12,7 +12,7 @@ public class WeekTextHandler : MonoBehaviour
     {
         dayTextField.text = dayNames[GlobalVariable.day];
         // To Fade Out Text
-        StartCoroutine(FadeTextToZeroAlpha(1f, dayTextField.GetComponent<Text>()));
+        //StartCoroutine(FadeTextToZeroAlpha(1f, dayTextField.GetComponent<Text>()));
 
         // To Fade In Text
         //StartCoroutine(FadeTextToFullAlpha(1f, dayTextField.GetComponent<Text>()));
