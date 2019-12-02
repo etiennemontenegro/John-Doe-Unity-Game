@@ -29,7 +29,7 @@ public class Switch_decoration_Home : MonoBehaviour
     static public int activeIndexTable = 0;
 
     public GameObject[] TV; 
-    static public int activeIndexTV = 1;
+    static public int activeIndexTV = 0;
 
     public GameObject[] Tablette;
     static public int activeIndexTablette = 0;

@@ -2059,6 +2059,7 @@ GameObject:
   - component: {fileID: 8254828226229307441}
   - component: {fileID: 6404570609806492623}
   - component: {fileID: 7115079421726449391}
+  - component: {fileID: 3179727304898024636}
   m_Layer: 5
   m_Name: CommandeButton
   m_TagString: Untagged
@@ -2164,7 +2165,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6404570609806492623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3179727304898024636}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3179727304898024636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399184133897858934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bed5e9a864d2443a44e47f3f8dd9cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUpOrder: {fileID: 0}
 --- !u!1 &5608458139407847535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +2878,7 @@ GameObject:
   - component: {fileID: 3637389745521222576}
   - component: {fileID: 2327991786457264070}
   - component: {fileID: 7567810502169411709}
+  - component: {fileID: 3993706896844498460}
   m_Layer: 5
   m_Name: SoldePriceLabel
   m_TagString: Untagged
@@ -2919,6 +2945,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 5000
+--- !u!114 &3993706896844498460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200423607443830024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80db8b5d034e76b41a4312e352384058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7272179806351664083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,16 +3455,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3183933819984091627}
     m_Modifications:
-    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
-        type: 3}
-      propertyPath: m_Name
-      value: PopUpYouSuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4456350121114283136, guid: a833f3b7e6c015e4fa00609eda315639,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3531,6 +3559,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
+        type: 3}
+      propertyPath: m_Name
+      value: PopUpYouSuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456350121114283137, guid: a833f3b7e6c015e4fa00609eda315639,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a833f3b7e6c015e4fa00609eda315639, type: 3}
