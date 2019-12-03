@@ -5,22 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: 2309222570d78e74d90df7701a8679bd
   - enabled: 1
     path: Assets/Scenes/Walking.unity
-    guid: 474a0f1ced3cb854fae066b75d40cbe4
+    guid: 93bcc244e7720604abdadee8cdf00eb4
   - enabled: 1
     path: Assets/Scenes/Work.unity
     guid: f472ace23e24c9c4bb05ce9fa47345c4
-  - enabled: 1
-    path: Assets/Scenes/HomeAntho.unity
-    guid: 0733b4d2ae9dc064ab12d8f9b941e850
-  - enabled: 1
-    path: Assets/Scenes/OutsideAntho.unity
-    guid: 00c1ca736132a8d4aac4ff0fe7af7554
   m_configObjects: {}
