@@ -2844,6 +2844,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7220699369206110195, guid: 3443d476ba401da42ab4484e91d10aba,
+        type: 3}
+      propertyPath: m_Text
+      value: Vous allez recevoir vos colis demain
+      objectReference: {fileID: 0}
     - target: {fileID: 3183933819984091627, guid: 3443d476ba401da42ab4484e91d10aba,
         type: 3}
       propertyPath: m_LocalPosition.x
