@@ -14,7 +14,7 @@ public class GlobalVariable : MonoBehaviour
     public static bool weekend = false;
     public static bool menu = true;
     public static bool goToWork = false;
-    public static int wallet = 10000; //argent dans ton compte
+    public static int wallet = 10000000; //argent dans ton compte
 
     public static bool startGame = false; //jouer commence a jouer ( sort du menu)
     public static bool menuWasSeen = false; //si le menu a été vu
