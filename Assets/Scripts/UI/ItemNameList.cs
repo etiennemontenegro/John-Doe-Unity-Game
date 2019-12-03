@@ -5,17 +5,17 @@ using UnityEngine;
 public class ItemNameList : MonoBehaviour
 {
     [SerializeField]
-    public static string[] GeneralitemNames = { "TV 1", "TV 2", "TV 3",
-                                              "Lumiere 1", "Lumiere 2",
-                                       "Table 1", "Table 2", "Table 3",
-                                                      "Mur 1", "Mur 2",
-                                    "Poster 1", "Poster 2", "Poster 3",
-                                    "Chaise 1", "Chaise 2", "Chaise 3",
-                                            "Plancher 1", "Plancher 2",
-                                                "Plante 1", "Plante 2",
-                                                "Trophe 1", "Trophe 2",
-                                          "Sofa 1", "Sofa 2", "Sofa 3",
-                                             "Lit 1", "Lit 2", "Lit 3",
-                                                         "Figidaire 2",
-                                                             "AMAZING" };
+    public static string[] GeneralitemNames = { "CRTTV 13po", "TCL720p 32po", "LG4K UHD 49po",
+                                              "Lampadaire usagee", "Lampadaire plaque or",
+                                       "Table basse en bois", "Table moderne noire", "Table antique",
+                                                      "Tapisserie", "Tapisserie",
+                                    "Affiches", "Peinture", "Joconde",
+                                    "Chaise hetre", "Chaise antique", "Chaise Fitz et Co.",
+                                            "Plancher bois Franc", "Tapis artisanal",
+                                                "Plante Costa Naar", "Cactus SP4 australien",
+                                                "Statuette faux or", "Trophee Oscar num 1",
+                                          "Fauteuil Inclinable", "Sofa contemporain", "Sofa Gibyag",
+                                             "Lit pliant", "Lit appoint 1 place", "Lit de luxe",
+                                                         "Refrigerateur",
+                                                             "AMAZING plaquee or" };
 }
