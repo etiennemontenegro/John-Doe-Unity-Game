@@ -53,6 +53,12 @@ public class GlobalVariable : MonoBehaviour
         
 }
 
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 90;
+    }
+
     // Update is called once per frame
     void Update()
     {
