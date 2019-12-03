@@ -2408,6 +2408,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1409989540}
     m_Modifications:
+    - target: {fileID: 41617072343507016, guid: 36d91931f71fb8d41ad31c48685e87eb,
+        type: 3}
+      propertyPath: m_Name
+      value: bigtrophy
+      objectReference: {fileID: 0}
     - target: {fileID: 2954252028390848501, guid: 36d91931f71fb8d41ad31c48685e87eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2462,11 +2467,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 41617072343507016, guid: 36d91931f71fb8d41ad31c48685e87eb,
-        type: 3}
-      propertyPath: m_Name
-      value: bigtrophy
       objectReference: {fileID: 0}
     - target: {fileID: 6336331031266964245, guid: 36d91931f71fb8d41ad31c48685e87eb,
         type: 3}
@@ -7646,7 +7646,7 @@ PrefabInstance:
     - target: {fileID: 2188744246975439261, guid: 70e0c64de72f4974ebc06d2add89a173,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70e0c64de72f4974ebc06d2add89a173, type: 3}

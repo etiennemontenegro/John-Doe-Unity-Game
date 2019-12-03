@@ -36,7 +36,7 @@ public class pubBehavior : MonoBehaviour
         TextPro.text = myObjectValue;
 
 
-        myObjectName = myObjectName.Split(new char[] { ' ' })[0];
+      //  myObjectName = myObjectName.Split(new char[] { ' ' })[0];
         TextPro2.text = myObjectName;
 
       
